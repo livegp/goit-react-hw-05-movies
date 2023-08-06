@@ -1,25 +1,27 @@
 import PropTypes from 'prop-types';
 
-import Gallery from './ImageGalleryItem.styled';
+import Container from './GalleryItem.styled';
 
-function ImageGalleryItem({ id, src, alt, onClick }) {
+function GalleryItem({ id, src, alt, onClick }) {
+  const POSTER_URL = `https://image.tmdb.org/t/p/w500`;
+  const url = `${POSTER_URL}${src}`;
   return (
-    <Gallery>
+    <Container>
       <img
-        src={src}
+        src={url}
         alt={alt}
         onClick={() => onClick(id)}
         role="presentation"
       />
-    </Gallery>
+    </Container>
   );
 }
 
-ImageGalleryItem.propTypes = {
+GalleryItem.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired
 };
 
-export default ImageGalleryItem;
+export default GalleryItem;

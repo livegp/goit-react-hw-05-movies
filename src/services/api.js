@@ -1,32 +1,37 @@
 import ky from 'ky';
 import { toast } from 'react-toastify';
 
-const BASE_URL = 'https://pixabay.com/api/';
-const API_KEY = '35608601-7cda014b012f6d1bf4756c5e4';
+const BASE_URL = 'https://api.themoviedb.org/3';
+const API_KEY = 'd1c21e798be8e69642bc9e5fdadcfaf6';
+
 const DEFAULT_PARAMS = {
-  key: API_KEY,
-  image_type: 'photo',
-  orientation: 'horizontal',
-  safesearch: true,
-  per_page: 12
+  api_key: API_KEY
 };
 
-async function onSearch(search, page) {
+async function fetch(endpoint, search, page, selected) {
+  const ENDPOINTS = {
+    trending: '/trending/movie/day',
+    searchMovies: '/search/movie',
+    movieDetails: `/movie/${selected}`,
+    movieCredits: '/movie/movie_id/credits',
+    movieReviews: '/movie/movie_id/reviews'
+  };
+
+  const url = `${BASE_URL}${ENDPOINTS[endpoint]}`;
   const options = {
     searchParams: {
       ...DEFAULT_PARAMS,
-      q: search,
-      page
+      ...(selected ? {} : { query: search, page })
     }
   };
 
   try {
-    const gallery = await ky.get(BASE_URL, options).json();
-    return gallery;
+    const response = await ky.get(url, options).json();
+    return response;
   } catch (error) {
     toast.error(`Error fetching data: ${error.message}`);
     throw new Error(`API request failed: ${error.message}`);
   }
 }
 
-export default onSearch;
+export default fetch;

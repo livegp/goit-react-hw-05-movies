@@ -4,7 +4,6 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { toast } from 'react-toastify';
 
 import {
-  Container,
   SearchForm,
   SearchFormButton,
   SearchFormInput,
@@ -22,22 +21,20 @@ function Searchbar({ onSubmit }) {
   };
 
   return (
-    <Container>
-      <Formik initialValues={{ search: '' }} onSubmit={handleSubmit}>
-        <SearchForm>
-          <SearchFormButton type="submit" value="submit">
-            <AiOutlineSearch />
-          </SearchFormButton>
-          <SearchFormLabel htmlFor="search" />
-          <SearchFormInput
-            type="text"
-            id="search"
-            name="search"
-            placeholder="Search"
-          />
-        </SearchForm>
-      </Formik>
-    </Container>
+    <Formik initialValues={{ search: '' }} onSubmit={handleSubmit}>
+      <SearchForm>
+        <SearchFormButton type="submit" value="submit">
+          <AiOutlineSearch />
+        </SearchFormButton>
+        <SearchFormLabel htmlFor="search" />
+        <SearchFormInput
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Search"
+        />
+      </SearchForm>
+    </Formik>
   );
 }
 

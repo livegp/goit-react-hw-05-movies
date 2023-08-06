@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 16px;
-  padding-bottom: 24px;
+export const Wrappen = styled.div`
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
-export default Container;
+
+export const Container = styled.div`
+  max-width: 1160px;
+  padding: 25px 10px;
+  margin: 0 auto;
+`;
