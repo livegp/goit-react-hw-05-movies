@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Container from './GalleryItem.styled';
 
@@ -7,12 +8,14 @@ function GalleryItem({ id, src, alt, onClick }) {
   const url = `${POSTER_URL}${src}`;
   return (
     <Container>
-      <img
-        src={url}
-        alt={alt}
-        onClick={() => onClick(id)}
-        role="presentation"
-      />
+      <Link to={`/movies/${id}`}>
+        <img
+          src={url}
+          alt={alt}
+          onClick={() => onClick(id)}
+          role="presentation"
+        />
+      </Link>
     </Container>
   );
 }

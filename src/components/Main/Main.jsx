@@ -23,7 +23,10 @@ function Main({ results, loading, selected, total, onLoadMore, onClick }) {
               />
             }
           />
-          <Route path="/movies" element={<Movies selected={selected} />} />
+          <Route
+            path={`/movies/${selected}`}
+            element={<Movies selected={selected} />}
+          />
         </Routes>
       </Container>
     </MainBox>
