@@ -16,7 +16,7 @@ function Header({ onSubmit }) {
     <HeaderBox>
       <Container>
         <Logo>
-          <a href="#">
+          <a href="/">
             <RiMovie2Line />
           </a>
         </Logo>
