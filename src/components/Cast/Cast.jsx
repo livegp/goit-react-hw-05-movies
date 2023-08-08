@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import List from './Cast.styled';
+import { List } from './Cast.styled';
 import fetch from '../../services/api';
 import Loader from '../Loader/Loader';
 
