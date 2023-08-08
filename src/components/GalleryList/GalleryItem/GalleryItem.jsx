@@ -4,11 +4,11 @@ import { Link, useLocation } from 'react-router-dom';
 import Container from './GalleryItem.styled';
 
 function GalleryItem({ post }) {
-  const { id, poster_path: posterPath, title } = post;
+  const { id, poster_path: poster, title } = post;
   const location = useLocation();
 
   const POSTER_URL = `https://image.tmdb.org/t/p/w500`;
-  const url = `${POSTER_URL}${posterPath}`;
+  const url = `${POSTER_URL}${poster}`;
   return (
     <Container>
       <Link to={`/movies/${id}`} state={{ from: location }}>
@@ -21,7 +21,7 @@ function GalleryItem({ post }) {
 GalleryItem.propTypes = {
   post: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    poster_path: PropTypes.string.isRequired,
+    poster_path: PropTypes.string,
     title: PropTypes.string.isRequired
   }).isRequired
 };

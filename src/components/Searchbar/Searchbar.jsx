@@ -15,11 +15,11 @@ function Searchbar() {
 
   const handleSearch = (values, actions) => {
     if (values.search.trim() === '') {
-      toast.error('Enter a word to search for:');
+      toast.error('Please enter a word to search for');
       return;
     }
 
-    navigate(`movies/?query=${encodeURIComponent(values.search)}`);
+    navigate(`movies?query=${encodeURIComponent(values.search)}`);
     actions.resetForm();
   };
 
