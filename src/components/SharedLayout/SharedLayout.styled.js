@@ -1,7 +1,19 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const HeaderBox = styled.header`
+export const Wrappen = styled.div`
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Container = styled.div`
+  max-width: 1160px;
+  padding: 25px 10px;
+  margin: 0 auto;
+`;
+
+export const Header = styled.header`
   position: sticky;
   top: 0;
   background-color: #3b5998;
@@ -77,7 +89,7 @@ export const HeaderBox = styled.header`
   }
 `;
 
-export const Container = styled.div`
+export const ContainerHeader = styled.div`
   max-width: 1160px;
   padding: 25px 10px;
   margin: 0 auto;
@@ -175,4 +187,15 @@ export const LoginBtn = styled.button`
       stroke: #f7f7f7;
     }
   }
+`;
+
+export const Main = styled.main`
+  flex-grow: 1;
+  background-color: #f7f7f7;
+`;
+
+export const Footer = styled.footer`
+  color: white;
+  background-color: #3b5998;
+  height: 75px;
 `;

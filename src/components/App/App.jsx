@@ -1,72 +1,26 @@
-import { useState, useEffect } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import { Wrappen } from './App.styled';
-import fetch from '../../services/api';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
-import Main from '../Main/Main';
+import SharedLayout from '../SharedLayout/SharedLayout';
+
+const Movies = lazy(() => import('../Details/Details'));
+const Details = lazy(() => import('../Details/Details'));
+const Home = lazy(() => import('../../pages/Home'));
+const Cast = lazy(() => import('../Cast/Cast'));
+const Reviews = lazy(() => import('../Reviews/Reviews'));
 
 function App() {
-  const [search, setSearch] = useState('');
-  const [results, setResults] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState(null);
-  const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
-
-  useEffect(() => {
-    fetchData('trending', '', page, '');
-  }, [page]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  const handleSearchSubmit = input => {
-    if (search !== input) {
-      setSearch(input);
-      setPage(1);
-    }
-  };
-
-  const handleLoadMore = () => {
-    setPage(prevPage => prevPage + 1);
-  };
-
-  const selectItem = item => {
-    setSelected(item.id);
-  };
-
-  const fetchData = (endpoint, searchIn, pageNumber, selectedId) => {
-    setLoading(true);
-
-    fetch(endpoint, searchIn, pageNumber, selectedId)
-      .then(newData => {
-        setTotal(newData.total_results);
-        const newResults =
-          pageNumber === 1 ? newData.results : [...results, ...newData.results];
-        setResults(newResults);
-        setLoading(false);
-      })
-      .catch(error => {
-        toast.error(`Error fetching data: ${error.message}`);
-        setLoading(false);
-      });
-  };
-
   return (
-    <Wrappen>
-      <Header onSubmit={handleSearchSubmit} />
-      <Main
-        results={results}
-        loading={loading}
-        selected={selected}
-        page={page}
-        total={total}
-        onLoadMore={handleLoadMore}
-        onClick={selectItem}
-      />
-      <Footer />
-      <ToastContainer hideProgressBar />
-    </Wrappen>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Home />} />
+        <Route path="movies" element={<Movies />} />
+        <Route path="movies/:id" element={<Details />}>
+          <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
+        </Route>
+      </Route>
+    </Routes>
   );
 }
 

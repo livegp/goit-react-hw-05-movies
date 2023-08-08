@@ -13,8 +13,8 @@ async function fetch(endpoint, search, page, selected) {
     trending: '/trending/movie/day',
     searchMovies: '/search/movie',
     movieDetails: `/movie/${selected}`,
-    movieCredits: '/movie/movie_id/credits',
-    movieReviews: '/movie/movie_id/reviews'
+    movieCredits: `/movie/${selected}/credits`,
+    movieReviews: `/movie/${selected}/reviews`
   };
 
   const url = `${BASE_URL}${ENDPOINTS[endpoint]}`;

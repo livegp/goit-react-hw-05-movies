@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
-import Btn from './Button.styled';
+import Btn from './LoadBtn.styled';
 
-function Button({ onLoadMore }) {
+function LoadBtn({ onLoadMore }) {
   return <Btn onClick={onLoadMore}>Load more</Btn>;
 }
 
-Button.propTypes = {
+LoadBtn.propTypes = {
   onLoadMore: PropTypes.func.isRequired
 };
 
-export default Button;
+export default LoadBtn;

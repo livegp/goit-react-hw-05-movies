@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.ul`
+export const Container = styled.ul`
   display: grid;
   max-width: calc(100vw - 48px);
   grid-template-columns: repeat(auto-fill, minmax(273px, 1fr));
@@ -13,4 +13,9 @@ const Container = styled.ul`
   margin-right: auto;
 `;
 
-export default Container;
+export const Title = styled.h1`
+  color: #3b5998;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+`;

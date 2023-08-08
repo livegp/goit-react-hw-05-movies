@@ -1,8 +1,9 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Card = styled.div`
   display: grid;
-  grid-template: auto auto 1fr auto / auto 1fr auto;
+  grid-template: auto auto 1fr auto auto / auto 1fr auto;
   gap: 25px;
   height: 100%;
   font-size: 16px;
@@ -43,35 +44,40 @@ export const Rating = styled.p`
 
 export const Overview = styled.p`
   color: #3b5998;
+  text-align: justify;
+  line-height: 1.2;
   grid-row: 3 / 4;
   grid-column: 2 / 4;
 `;
 
-export const Additional = styled.p`
-  font-size: 16px;
+export const BtnAdditional = styled.ul`
   color: #3b5998;
   grid-row: 4 / 5;
-  grid-column: 1 / 4;
-  width: 100%;
+  grid-column: 1 / 2;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+
+  li {
+    width: 100%;
+  }
+`;
+
+export const Link = styled(NavLink)`
+  text-align: center;
+  background-color: #dfe3ee;
+  color: #3b5998;
+  border-radius: 5px;
+  padding: 5px 10px;
   display: block;
 
-  ul {
-    display: flex;
-    gap: 25px;
-  }
-
-  a {
-    text-align: center;
+  &:hover {
     background-color: #3b5998;
     color: #dfe3ee;
-    border-radius: 5px;
-    padding: 5px 10px;
-    display: block;
-    width: 124px;
+  }
 
-    &:hover {
-      background-color: #dfe3ee;
-      color: #3b5998;
-    }
+  &.active {
+    background-color: #3b5998;
+    color: #dfe3ee;
   }
 `;
