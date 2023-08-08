@@ -36,7 +36,7 @@ export const Header = styled.header`
     user-select: none;
     display: none;
     background: #ffecb3;
-    border-radius: 5px;
+    border-radius: 4px;
     padding: 16px;
     order: 5;
   }
@@ -110,8 +110,8 @@ export const Logo = styled.div`
 
   svg {
     display: block;
-    width: 43px;
-    height: 43px;
+    width: 40px;
+    height: 40px;
     fill: #dfe3ee;
   }
 
@@ -145,8 +145,9 @@ export const Nav = styled.nav`
 `;
 
 export const Link = styled(NavLink)`
+  display: block;
   background: transparent;
-  border-radius: 5px;
+  border-radius: 4px;
   border: 2px solid transparent;
   padding: 8px;
   order: 0;
@@ -177,8 +178,8 @@ export const LoginBtn = styled.button`
 
   svg {
     display: block;
-    width: 43px;
-    height: 43px;
+    width: 40px;
+    height: 40px;
     stroke: #dfe3ee;
   }
 
@@ -197,5 +198,5 @@ export const Main = styled.main`
 export const Footer = styled.footer`
   color: white;
   background-color: #3b5998;
-  height: 75px;
+  height: 72px;
 `;

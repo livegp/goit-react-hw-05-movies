@@ -4,11 +4,11 @@ const Btn = styled.button`
   display: flex;
   margin: 25px auto 0;
   padding: 8px 16px;
-  border-radius: 2px;
+  border-radius: 4px;
   background-color: #3b5998;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
-  color: #f7f7f7;
+  color: #dfe3ee;
   border: 0;
   text-decoration: none;
   cursor: pointer;
@@ -25,7 +25,7 @@ const Btn = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #f7f7f7;
+    background-color: #dfe3ee;
     color: #3b5998;
   }
 `;

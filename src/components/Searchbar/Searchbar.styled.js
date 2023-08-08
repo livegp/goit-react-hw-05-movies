@@ -14,8 +14,8 @@ export const SearchForm = styled(Form)`
 
 export const SearchFormButton = styled.button`
   display: inline-block;
-  width: 43px;
-  height: 43px;
+  width: 40px;
+  height: 40px;
   border: 0;
   opacity: 0.6;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
