@@ -39,7 +39,13 @@ function Movies() {
       });
   };
 
-  return <Details />;
+  return (
+    <Details
+      results={results}
+      handleLoadMore={handleLoadMore}
+      loading={loading}
+    />
+  );
 }
 
 export default Movies;
