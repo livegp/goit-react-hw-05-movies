@@ -14,7 +14,7 @@ export const Container = styled.ul`
 `;
 
 export const Title = styled.h1`
-  color: #3b5998;
+  color: #8b9dc3;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 25px;

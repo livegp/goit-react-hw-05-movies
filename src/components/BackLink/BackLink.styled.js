@@ -8,7 +8,7 @@ export const StyledLink = styled(Link)`
   margin-bottom: 25px;
   color: black;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   text-transform: uppercase;
   color: #8b9dc3;
 
