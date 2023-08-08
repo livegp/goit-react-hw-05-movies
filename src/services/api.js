@@ -21,7 +21,8 @@ async function fetch(endpoint, search, page, selected) {
   const options = {
     searchParams: {
       ...DEFAULT_PARAMS,
-      ...(selected ? {} : { query: search, page })
+      ...(selected ? {} : { page }),
+      ...(search ? { query: search, page } : {})
     }
   };
 

@@ -18,7 +18,7 @@ import {
 import Loader from '../Loader/Loader';
 import Searchbar from '../Searchbar/Searchbar';
 
-function SharedLayout({ onSubmit }) {
+function SharedLayout() {
   return (
     <Wrappen>
       <Header>
@@ -38,7 +38,7 @@ function SharedLayout({ onSubmit }) {
               </li>
             </ul>
           </Nav>
-          <Searchbar onSubmit={onSubmit} />
+          <Searchbar />
           <LoginBtn type="button">
             <IoLogInOutline />
           </LoginBtn>

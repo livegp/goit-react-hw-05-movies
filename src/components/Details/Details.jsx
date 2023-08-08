@@ -26,6 +26,10 @@ function Details() {
   const backLinkHref = location.state?.from ?? '/';
 
   useEffect(() => {
+    if (!id) {
+      return;
+    }
+
     setLoading(true);
 
     fetch('movieDetails', '', '', id)
@@ -39,6 +43,10 @@ function Details() {
       });
   }, [id]);
 
+  if (!id) {
+    return null;
+  }
+
   if (loading) {
     return <Loader />;
   }
@@ -47,22 +55,27 @@ function Details() {
     return null;
   }
 
+  const {
+    title,
+    genres,
+    vote_average: rating,
+    overview,
+    poster_path: poster
+  } = movieDetails;
   const POSTER_URL = `https://image.tmdb.org/t/p/w500`;
-  const url = `${POSTER_URL}${movieDetails.poster_path}`;
+  const url = `${POSTER_URL}${poster}`;
 
   return (
     <>
       <BackLink to={backLinkHref} />
       <Card>
-        <Image src={url} alt={movieDetails.title} />
-        <Title>{movieDetails.title}</Title>
-        <Genres>
-          {movieDetails.genres.map(genre => genre.name).join(', ')}
-        </Genres>
+        <Image src={url} alt={title} />
+        <Title>{title}</Title>
+        <Genres>{genres.map(genre => genre.name).join(', ')}</Genres>
         <Rating>
-          <AiFillStar /> {movieDetails.vote_average.toFixed(1)}
+          <AiFillStar /> {rating.toFixed(1)}
         </Rating>
-        <Overview>{movieDetails.overview}</Overview>
+        <Overview>{overview}</Overview>
         <BtnAdditional>
           <li>
             <Link to="cast">Cast</Link>

@@ -25,7 +25,7 @@ function Home() {
   const fetchData = (endpoint, searchIn, pageNumber) => {
     setLoading(true);
 
-    fetch(endpoint, searchIn, pageNumber)
+    fetch(endpoint, searchIn, pageNumber, '')
       .then(newData => {
         setTotal(newData.total_results);
         const newResults =

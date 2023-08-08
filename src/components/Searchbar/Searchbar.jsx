@@ -1,6 +1,6 @@
 import { Formik } from 'formik';
-import PropTypes from 'prop-types';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import {
@@ -10,18 +10,21 @@ import {
   SearchFormLabel
 } from './Searchbar.styled';
 
-function Searchbar({ onSubmit }) {
-  const handleSubmit = (values, actions) => {
+function Searchbar() {
+  const navigate = useNavigate();
+
+  const handleSearch = (values, actions) => {
     if (values.search.trim() === '') {
       toast.error('Enter a word to search for:');
       return;
     }
-    onSubmit(values.search);
+
+    navigate(`movies/?query=${encodeURIComponent(values.search)}`);
     actions.resetForm();
   };
 
   return (
-    <Formik initialValues={{ search: '' }} onSubmit={handleSubmit}>
+    <Formik initialValues={{ search: '' }} onSubmit={handleSearch}>
       <SearchForm>
         <SearchFormButton type="submit" value="submit">
           <AiOutlineSearch />
@@ -37,9 +40,5 @@ function Searchbar({ onSubmit }) {
     </Formik>
   );
 }
-
-Searchbar.propTypes = {
-  onSubmit: PropTypes.func.isRequired
-};
 
 export default Searchbar;
