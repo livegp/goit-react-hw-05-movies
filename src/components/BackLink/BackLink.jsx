@@ -1,4 +1,3 @@
-import React from 'react';
 import { IoChevronBack } from 'react-icons/io5';
 
 import { LinkContainer, StyledLink } from './BackLink.styled';
