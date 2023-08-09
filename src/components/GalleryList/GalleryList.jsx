@@ -6,8 +6,9 @@ import LoadBtn from '../LoadBtn/LoadBtn';
 import Loader from '../Loader/Loader';
 
 function GalleryList({ results, title, loading, onLoadMore, total }) {
+  const showPoster = Array.isArray(results) && results.length > 0;
   return (
-    results && (
+    showPoster && (
       <>
         <Title>{title}</Title>
         <Container>
