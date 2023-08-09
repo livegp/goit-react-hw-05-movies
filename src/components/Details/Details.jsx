@@ -13,7 +13,7 @@ import {
   Rating,
   Title
 } from './Details.styled';
-import fetch from '../../services/api';
+import fetch from '../../services/fetch';
 import BackLink from '../BackLink/BackLink';
 import Loader from '../Loader/Loader';
 

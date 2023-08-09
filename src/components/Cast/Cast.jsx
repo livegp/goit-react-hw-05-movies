@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import { List } from './Cast.styled';
-import fetch from '../../services/api';
+import fetch from '../../services/fetch';
 import Loader from '../Loader/Loader';
 
 function Cast() {

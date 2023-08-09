@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import GalleryList from '../components/GalleryList/GalleryList';
-import fetch from '../services/api';
+import fetch from '../services/fetch';
 
 function Movies() {
   const [results, setResults] = useState([]);

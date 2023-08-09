@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
 import GalleryList from '../components/GalleryList/GalleryList';
-import fetch from '../services/api';
+import fetch from '../services/fetch';
 
 function Home() {
   const [results, setResults] = useState([]);
