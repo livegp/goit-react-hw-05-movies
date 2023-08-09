@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import GalleryList from '../components/GalleryList/GalleryList';
@@ -18,18 +19,20 @@ function Movies() {
       ? `You searched for "${searchQuery}"`
       : 'Enter a query to search';
 
+  const [searchParams] = useSearchParams();
+
   useEffect(() => {
-    const query = new URLSearchParams(window.location.search).get('query');
+    const query = searchParams.get('query');
     if (query !== null) {
-      setSearchQuery(query);
+      setSearchQuery(prevQuery => (prevQuery !== query ? query : prevQuery));
     }
-  }, [searchQuery]);
+  }, [searchParams]);
 
   useEffect(() => {
     if (searchQuery !== null) {
       fetchData('searchMovies', searchQuery, page, '');
     }
-  }, [searchQuery, page]); //eslint-disable-line
+  }, [searchQuery, page]); // eslint-disable-line
 
   const handleLoadMore = () => {
     setPage(prevPage => prevPage + 1);
