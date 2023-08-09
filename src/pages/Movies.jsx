@@ -20,7 +20,9 @@ function Movies() {
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search).get('query');
-    setSearchQuery(query);
+    if (query !== null) {
+      setSearchQuery(query);
+    }
   }, [searchQuery]);
 
   useEffect(() => {
