@@ -30,6 +30,10 @@ const useDataFetching = (endpoint, searchIn, initialPage = 1) => {
     fetchData();
   }, [searchIn, page]); // eslint-disable-line
 
+  useEffect(() => {
+    setPage(1);
+  }, [searchIn]);
+
   const handleLoadMore = () => {
     setPage(prevPage => prevPage + 1);
   };
