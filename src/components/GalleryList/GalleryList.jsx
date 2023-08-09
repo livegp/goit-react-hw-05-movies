@@ -8,20 +8,20 @@ import Loader from '../Loader/Loader';
 function GalleryList({ results, title, loading, onLoadMore, total }) {
   const showPoster = Array.isArray(results) && results.length > 0;
   return (
-    showPoster && (
-      <>
-        <Title>{title}</Title>
+    <>
+      <Title>{title}</Title>
+      {showPoster && (
         <Container>
           {results.map(post => (
             <GalleryItem key={post.id} post={post} />
           ))}
         </Container>
-        {loading && <Loader />}
-        {!loading && results.length < total && (
-          <LoadBtn onLoadMore={onLoadMore} />
-        )}
-      </>
-    )
+      )}
+      {loading && <Loader />}
+      {!loading && results.length < total && (
+        <LoadBtn onLoadMore={onLoadMore} />
+      )}
+    </>
   );
 }
 
