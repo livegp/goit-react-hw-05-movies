@@ -12,6 +12,10 @@ function Reviews() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!id) {
+      return;
+    }
+
     fetch('movieReviews', '', '', id)
       .then(data => {
         setReviews(data.results);

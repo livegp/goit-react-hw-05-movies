@@ -12,6 +12,10 @@ function Cast() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!id) {
+      return;
+    }
+
     fetch('movieCredits', '', '', id)
       .then(data => {
         setCast(data.cast);

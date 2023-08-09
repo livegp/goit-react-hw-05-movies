@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
-import Details from '../components/Details/Details';
 import GalleryList from '../components/GalleryList/GalleryList';
 import LoadBtn from '../components/LoadBtn/LoadBtn';
 import Loader from '../components/Loader/Loader';
@@ -20,13 +19,15 @@ function Movies() {
       : 'Enter a query to search';
 
   useEffect(() => {
+    console.log('start useEffect');
     const query = new URLSearchParams(window.location.search).get('query');
+    console.log('1', query);
     setSearchQuery(query);
-  }, []);
+  }, [searchQuery]);
 
   useEffect(() => {
     if (searchQuery !== null) {
-      fetchData('searchMovies', searchQuery, page);
+      fetchData('searchMovies', searchQuery, page, '');
     }
   }, [searchQuery, page]); //eslint-disable-line
 
@@ -53,7 +54,6 @@ function Movies() {
 
   return (
     <>
-      <Details />
       <GalleryList results={results} title={title} />
       {loading && <Loader />}
       {!loading && results.length < total && (

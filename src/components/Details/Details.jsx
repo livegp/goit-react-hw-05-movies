@@ -23,7 +23,7 @@ function Details() {
   const [loading, setLoading] = useState(false);
 
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/';
+  const backLink = location.state?.from ?? '/';
 
   useEffect(() => {
     if (!id) {
@@ -67,7 +67,7 @@ function Details() {
 
   return (
     <>
-      <BackLink to={backLinkHref} />
+      <BackLink to={backLink} />
       <Card>
         <Image src={url} alt={title} />
         <Title>{title}</Title>
