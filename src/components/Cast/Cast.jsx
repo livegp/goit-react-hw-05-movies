@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import { List } from './Cast.styled';
 import fetch from '../../services/fetch';
 import Loader from '../Loader/Loader';
+import NoDataMessage from '../NoDataMessage/NoDataMessage';
 
 function Cast() {
   const { id } = useParams();
@@ -31,12 +32,16 @@ function Cast() {
     return <Loader />;
   }
 
-  return (
+  const showCast = Array.isArray(cast) && cast.length > 0;
+
+  return showCast ? (
     <List>
       {cast.map(({ id: key, name }) => (
         <li key={key}>{name}</li>
       ))}
     </List>
+  ) : (
+    <NoDataMessage />
   );
 }
 

@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-import { List } from './Reviews.styled';
+import List from './Reviews.styled';
 import fetch from '../../services/fetch';
 import Loader from '../Loader/Loader';
+import NoDataMessage from '../NoDataMessage/NoDataMessage';
 
 function Reviews() {
   const { id } = useParams();
@@ -31,7 +32,9 @@ function Reviews() {
     return <Loader />;
   }
 
-  return (
+  const showCast = Array.isArray(reviews) && reviews.length > 0;
+
+  return showCast ? (
     <List>
       {reviews.map(({ id: key, author, content }) => (
         <li key={key}>
@@ -40,6 +43,8 @@ function Reviews() {
         </li>
       ))}
     </List>
+  ) : (
+    <NoDataMessage />
   );
 }
 

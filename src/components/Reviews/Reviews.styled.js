@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const List = styled.ul`
+const List = styled.ul`
   display: grid;
   gap: 25px;
   grid-row: 5 / 6;
