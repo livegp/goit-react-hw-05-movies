@@ -19,9 +19,7 @@ function Movies() {
       : 'Enter a query to search';
 
   useEffect(() => {
-    console.log('start useEffect');
     const query = new URLSearchParams(window.location.search).get('query');
-    console.log('1', query);
     setSearchQuery(query);
   }, [searchQuery]);
 
