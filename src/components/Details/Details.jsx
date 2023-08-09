@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, Suspense, useRef } from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -24,9 +24,8 @@ function Details() {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
   const [loading, setLoading] = useState(false);
-
   const location = useLocation();
-  const backLink = location.state?.from ?? '/';
+  const backLink = useRef(location.state?.from ?? '/');
 
   useEffect(() => {
     if (!id) {
@@ -70,7 +69,7 @@ function Details() {
 
   return (
     <>
-      <BackLink to={backLink} />
+      <BackLink to={backLink.current} />
       <Card>
         <Image src={url} alt={title} />
         <Title>{title}</Title>
