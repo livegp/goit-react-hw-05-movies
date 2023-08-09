@@ -13,13 +13,12 @@ function Movies() {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState(null);
+  const [searchParams] = useSearchParams();
 
   const title =
     searchQuery !== null
       ? `You searched for "${searchQuery}"`
       : 'Enter a query to search';
-
-  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     const query = searchParams.get('query');

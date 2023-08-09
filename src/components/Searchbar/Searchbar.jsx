@@ -13,13 +13,13 @@ import {
 function Searchbar() {
   const navigate = useNavigate();
 
-  const handleSearch = (values, actions) => {
-    if (values.search.trim() === '') {
+  const handleSearch = ({ search }, actions) => {
+    if (search.trim() === '') {
       toast.error('Please enter a word to search for');
       return;
     }
 
-    navigate(`movies?query=${encodeURIComponent(values.search)}`);
+    navigate(`movies?query=${encodeURIComponent(search)}`);
     actions.resetForm();
   };
 
