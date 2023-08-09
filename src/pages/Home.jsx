@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
 import GalleryList from '../components/GalleryList/GalleryList';
-import LoadBtn from '../components/LoadBtn/LoadBtn';
-import Loader from '../components/Loader/Loader';
 import fetch from '../services/api';
 
 function Home() {
@@ -15,17 +13,13 @@ function Home() {
   const title = 'In trend';
 
   useEffect(() => {
-    fetchData('trending', '', page, '');
+    fetchData('trending', '', page);
   }, [page]); // eslint-disable-line
-
-  const handleLoadMore = () => {
-    setPage(prevPage => prevPage + 1);
-  };
 
   const fetchData = (endpoint, searchIn, pageNumber) => {
     setLoading(true);
 
-    fetch(endpoint, searchIn, pageNumber, '')
+    fetch(endpoint, searchIn, pageNumber)
       .then(newData => {
         setTotal(newData.total_results);
         const newResults =
@@ -39,14 +33,18 @@ function Home() {
       });
   };
 
+  const handleLoadMore = () => {
+    setPage(prevPage => prevPage + 1);
+  };
+
   return (
-    <>
-      <GalleryList results={results} title={title} />
-      {loading && <Loader />}
-      {!loading && results.length < total && (
-        <LoadBtn onLoadMore={handleLoadMore} />
-      )}
-    </>
+    <GalleryList
+      results={results}
+      title={title}
+      loading={loading}
+      onLoadMore={handleLoadMore}
+      total={total}
+    />
   );
 }
 

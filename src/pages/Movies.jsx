@@ -3,8 +3,6 @@ import { useSearchParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import GalleryList from '../components/GalleryList/GalleryList';
-import LoadBtn from '../components/LoadBtn/LoadBtn';
-import Loader from '../components/Loader/Loader';
 import fetch from '../services/api';
 
 function Movies() {
@@ -33,10 +31,6 @@ function Movies() {
     }
   }, [searchQuery, page]); // eslint-disable-line
 
-  const handleLoadMore = () => {
-    setPage(prevPage => prevPage + 1);
-  };
-
   const fetchData = (endpoint, searchIn, pageNumber) => {
     setLoading(true);
 
@@ -54,14 +48,18 @@ function Movies() {
       });
   };
 
+  const handleLoadMore = () => {
+    setPage(prevPage => prevPage + 1);
+  };
+
   return (
-    <>
-      <GalleryList results={results} title={title} />
-      {loading && <Loader />}
-      {!loading && results.length < total && (
-        <LoadBtn onLoadMore={handleLoadMore} />
-      )}
-    </>
+    <GalleryList
+      results={results}
+      title={title}
+      loading={loading}
+      onLoadMore={handleLoadMore}
+      total={total}
+    />
   );
 }
 

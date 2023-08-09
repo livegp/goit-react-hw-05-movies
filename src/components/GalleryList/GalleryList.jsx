@@ -2,8 +2,10 @@ import PropTypes from 'prop-types';
 
 import GalleryItem from './GalleryItem/GalleryItem';
 import { Container, Title } from './GalleryList.styled';
+import LoadBtn from '../LoadBtn/LoadBtn';
+import Loader from '../Loader/Loader';
 
-function GalleryList({ results, title }) {
+function GalleryList({ results, title, loading, onLoadMore, total }) {
   return (
     results && (
       <>
@@ -13,6 +15,10 @@ function GalleryList({ results, title }) {
             <GalleryItem key={post.id} post={post} />
           ))}
         </Container>
+        {loading && <Loader />}
+        {!loading && results.length < total && (
+          <LoadBtn onLoadMore={onLoadMore} />
+        )}
       </>
     )
   );
@@ -25,7 +31,11 @@ GalleryList.propTypes = {
       poster_path: PropTypes.string,
       title: PropTypes.string.isRequired
     }).isRequired
-  ).isRequired
+  ).isRequired,
+  title: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
+  onLoadMore: PropTypes.func.isRequired,
+  total: PropTypes.number.isRequired
 };
 
 export default GalleryList;
