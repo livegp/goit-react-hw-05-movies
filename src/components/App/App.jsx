@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 const Loader = lazy(() => import('../Loader/Loader'));
 const SharedLayout = lazy(() => import('../SharedLayout/SharedLayout'));
@@ -8,7 +8,7 @@ const Movies = lazy(() => import('../../pages/Movies'));
 const MoviesDetails = lazy(() => import('../../pages/MoviesDetails'));
 const Cast = lazy(() => import('../Cast/Cast'));
 const Reviews = lazy(() => import('../Reviews/Reviews'));
-const NotFound = lazy(() => import('../../pages/NotFound'));
+// const NotFound = lazy(() => import('../../pages/NotFound'));
 
 function App() {
   return (
@@ -21,7 +21,8 @@ function App() {
             <Route path="cast" element={<Cast />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/" />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Route>
       </Routes>
     </Suspense>
