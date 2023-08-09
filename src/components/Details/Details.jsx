@@ -71,7 +71,7 @@ function Details() {
       <Card>
         <Image src={url} alt={title} />
         <Title>{title}</Title>
-        <Genres>{genres.map(genre => genre.name).join(', ')}</Genres>
+        <Genres>{genres.map(({ name }) => name).join(', ')}</Genres>
         <Rating>
           <AiFillStar /> {rating.toFixed(1)}
         </Rating>
