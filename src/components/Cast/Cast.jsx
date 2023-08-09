@@ -33,8 +33,8 @@ function Cast() {
 
   return (
     <List>
-      {cast.map(actor => (
-        <li key={actor.id}>{actor.name}</li>
+      {cast.map(({ id: key, name }) => (
+        <li key={key}>{name}</li>
       ))}
     </List>
   );
