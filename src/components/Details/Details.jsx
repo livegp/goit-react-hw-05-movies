@@ -17,6 +17,9 @@ import fetch from '../../services/api';
 import BackLink from '../BackLink/BackLink';
 import Loader from '../Loader/Loader';
 
+const defaultImg =
+  'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
+
 function Details() {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
@@ -63,7 +66,7 @@ function Details() {
     poster_path: poster
   } = movieDetails;
   const POSTER_URL = `https://image.tmdb.org/t/p/w500`;
-  const url = `${POSTER_URL}${poster}`;
+  const url = poster ? `${POSTER_URL}${poster}` : defaultImg;
 
   return (
     <>
