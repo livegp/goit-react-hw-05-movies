@@ -1,11 +1,10 @@
 import { Suspense } from 'react';
 import { IoLogInOutline } from 'react-icons/io5';
 import { RiMovie2Line } from 'react-icons/ri';
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 import {
   Header,
-  Link,
   Footer,
   Logo,
   Nav,
@@ -13,7 +12,8 @@ import {
   ContainerHeader,
   Wrappen,
   Container,
-  Main
+  Main,
+  StyleNavLink
 } from './SharedLayout.styled';
 import Loader from '../Loader/Loader';
 import Searchbar from '../Searchbar/Searchbar';
@@ -24,17 +24,17 @@ function SharedLayout() {
       <Header>
         <ContainerHeader>
           <Logo>
-            <a href="/">
+            <Link to="/">
               <RiMovie2Line />
-            </a>
+            </Link>
           </Logo>
           <Nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <StyleNavLink to="/">Home</StyleNavLink>
               </li>
               <li>
-                <Link to="/movies">Movies</Link>
+                <StyleNavLink to="/movies">Movies</StyleNavLink>
               </li>
             </ul>
           </Nav>

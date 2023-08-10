@@ -144,7 +144,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Link = styled(NavLink)`
+export const StyleNavLink = styled(NavLink)`
   display: block;
   background: transparent;
   border-radius: 4px;
