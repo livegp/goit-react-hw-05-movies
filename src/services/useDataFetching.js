@@ -32,6 +32,7 @@ const useDataFetching = (endpoint, searchIn, initialPage = 1) => {
 
   useEffect(() => {
     setPage(1);
+    setResults([]);
   }, [searchIn]);
 
   const handleLoadMore = () => {
