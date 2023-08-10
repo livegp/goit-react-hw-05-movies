@@ -146,7 +146,7 @@ export const Nav = styled.nav`
 
 export const StyleNavLink = styled(NavLink)`
   display: block;
-  background: transparent;
+  background-color: transparent;
   border-radius: 4px;
   border: 2px solid transparent;
   padding: 8px;
@@ -157,10 +157,15 @@ export const StyleNavLink = styled(NavLink)`
 
   &:hover {
     border: 2px solid #dfe3ee;
+
+    &.active {
+      background-color: #f7f7f7;
+      border: 2px solid #f7f7f7;
+    }
   }
 
   &.active {
-    background: #dfe3ee;
+    background-color: #dfe3ee;
     color: #3b5998;
   }
 `;

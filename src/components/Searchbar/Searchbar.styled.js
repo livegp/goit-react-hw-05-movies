@@ -29,11 +29,7 @@ export const SearchFormButton = styled.button`
   align-items: center;
 
   &:hover {
-    background-color: transparent;
-    color: #dfe3ee;
-    svg {
-      fill: #dfe3ee;
-    }
+    background-color: #f7f7f7;
   }
 
   svg {
