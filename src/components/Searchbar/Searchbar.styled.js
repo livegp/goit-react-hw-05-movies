@@ -6,7 +6,8 @@ export const SearchForm = styled(Form)`
   align-items: center;
   width: 100%;
   max-width: 300px;
-  background-color: #f7f7f7;
+  border: 2px solid #dfe3ee;
+  background-color: transparent;
   border-radius: 4px;
   overflow: hidden;
   order: 3;
@@ -14,16 +15,22 @@ export const SearchForm = styled(Form)`
 
 export const SearchFormButton = styled.button`
   display: inline-block;
+  background-color: #dfe3ee;
+  color: #3b5998;
   width: 40px;
   height: 40px;
   border: 0;
-  opacity: 0.6;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
+  border-right: 2px solid #dfe3ee;
 
   &:hover {
-    opacity: 1;
+    background-color: transparent;
+    color: #dfe3ee;
+    svg {
+      fill: #dfe3ee;
+    }
   }
 
   svg {
@@ -49,15 +56,16 @@ export const SearchFormInput = styled(Field)`
   display: inline-block;
   width: 100%;
   font: inherit;
+  color: #dfe3ee;
   font-size: 20px;
   border: none;
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
-  background-color: #f7f7f7;
+  background-color: transparent;
 
   &::placeholder {
-    color: #3b5998;
+    color: #dfe3ee;
     font: inherit;
     font-size: 18px;
   }
