@@ -14,8 +14,8 @@ export const SearchForm = styled(Form)`
 `;
 
 export const SearchFormButton = styled.button`
-  display: inline-block;
   background-color: #dfe3ee;
+  padding: 0;
   color: #3b5998;
   width: 36px;
   height: 36px;
@@ -24,6 +24,9 @@ export const SearchFormButton = styled.button`
   cursor: pointer;
   outline: none;
   border-right: 2px solid #dfe3ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: transparent;
@@ -34,8 +37,8 @@ export const SearchFormButton = styled.button`
   }
 
   svg {
-    width: 100%;
-    height: 100%;
+    width: 25px;
+    height: 25px;
     fill: #3b5998;
   }
 `;
