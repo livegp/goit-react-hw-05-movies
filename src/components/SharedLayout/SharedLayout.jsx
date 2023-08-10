@@ -52,7 +52,13 @@ function SharedLayout() {
         </Container>
       </Main>
       <Footer>
-        <Container />
+        <Container>
+          <p>
+            {' '}
+            &copy; 2023 Movies App. All rights reserved. Designed and Developed
+            by Oleksandr Pishta
+          </p>
+        </Container>
       </Footer>
     </Wrappen>
   );

@@ -200,7 +200,6 @@ export const Main = styled.main`
 `;
 
 export const Footer = styled.footer`
-  color: white;
+  color: #dfe3ee;
   background-color: #3b5998;
-  height: 72px;
 `;
