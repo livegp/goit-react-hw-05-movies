@@ -63,10 +63,18 @@ export const SearchFormInput = styled(Field)`
   padding-left: 4px;
   padding-right: 4px;
   background-color: transparent;
+  color-scheme: dark;
 
   &::placeholder {
+    background-color: transparent;
     color: #dfe3ee;
     font: inherit;
     font-size: 18px;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    outline: 3px solid black;
   }
 `;
