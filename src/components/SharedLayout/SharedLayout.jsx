@@ -56,7 +56,14 @@ function SharedLayout() {
           <p>
             {' '}
             &copy; 2023 Movies App. All rights reserved. Designed and Developed
-            by Oleksandr Pishta
+            by{' '}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/oleksandr-pishta"
+            >
+              Oleksandr Pishta
+            </a>
           </p>
         </Container>
       </Footer>
