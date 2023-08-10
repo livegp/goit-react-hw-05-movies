@@ -11,6 +11,11 @@ export const SearchForm = styled(Form)`
   border-radius: 4px;
   overflow: hidden;
   order: 3;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-color: #f7f7f7;
+  }
 `;
 
 export const SearchFormButton = styled.button`

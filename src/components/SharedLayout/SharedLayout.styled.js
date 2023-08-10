@@ -113,6 +113,7 @@ export const Logo = styled.div`
     width: 40px;
     height: 40px;
     fill: #dfe3ee;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover {
@@ -128,10 +129,6 @@ export const Nav = styled.nav`
   position: static;
   order: 2;
   flex-grow: 1;
-  top: 250px;
-  left: 0;
-  transform: translate(0, 0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   ul {
     display: flex;
@@ -154,9 +151,11 @@ export const StyleNavLink = styled(NavLink)`
   color: #dfe3ee;
   font-size: 20px;
   font-weight: bold;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    border: 2px solid #dfe3ee;
+    color: #f7f7f7;
+    border: 2px solid #f7f7f7;
 
     &.active {
       background-color: #f7f7f7;
@@ -175,7 +174,7 @@ export const LoginBtn = styled.button`
   margin-top: 0;
   background: transparent;
   border-width: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   display: block;
   flex-basis: auto;
