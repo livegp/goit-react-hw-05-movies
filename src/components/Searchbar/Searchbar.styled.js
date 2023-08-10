@@ -17,8 +17,8 @@ export const SearchFormButton = styled.button`
   display: inline-block;
   background-color: #dfe3ee;
   color: #3b5998;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border: 0;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
