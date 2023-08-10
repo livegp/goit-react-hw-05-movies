@@ -8,16 +8,17 @@ const useDataFetching = (endpoint, searchIn, initialPage = 1) => {
   const [page, setPage] = useState(initialPage);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState(searchIn);
 
   const fetchData = () => {
     setLoading(true);
 
-    fetch(endpoint, searchIn, page)
+    fetch(endpoint, search, page)
       .then(newData => {
         setTotal(newData.total_results);
-        const newResults =
-          page === 1 ? newData.results : [...results, ...newData.results];
-        setResults(newResults);
+        setResults(prevResults =>
+          page === 1 ? newData.results : [...prevResults, ...newData.results]
+        );
         setLoading(false);
       })
       .catch(error => {
@@ -26,18 +27,18 @@ const useDataFetching = (endpoint, searchIn, initialPage = 1) => {
       });
   };
 
-  useEffect(() => {
-    fetchData();
-  }, [searchIn, page]); // eslint-disable-line
-
-  useEffect(() => {
-    setPage(1);
-    setResults([]);
-  }, [searchIn]);
-
   const handleLoadMore = () => {
     setPage(prevPage => prevPage + 1);
   };
+
+  useEffect(() => {
+    if (search !== searchIn) {
+      setPage(1);
+      setResults([]);
+      setSearch(searchIn);
+    }
+    fetchData();
+  }, [searchIn, page, search]); // eslint-disable-line
 
   return {
     results,
