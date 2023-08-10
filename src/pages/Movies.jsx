@@ -22,10 +22,15 @@ function Movies() {
     1
   );
 
-  const title =
-    searchQuery !== null
-      ? `You searched for "${searchQuery}"`
-      : 'Enter a query to search';
+  let title;
+  if (searchQuery !== null) {
+    title = `Nothing was found for the search query "${searchQuery}".`;
+    if (Array.isArray(results) && results.length > 0) {
+      title = `You searched for "${searchQuery}"`;
+    }
+  } else {
+    title = 'Enter a query to search';
+  }
 
   return (
     <GalleryList
