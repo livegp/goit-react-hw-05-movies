@@ -71,10 +71,15 @@ export const Link = styled(NavLink)`
   border-radius: 5px;
   padding: 5px 10px;
   display: block;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     background-color: #3b5998;
     color: #dfe3ee;
+
+    &.active {
+      color: #f7f7f7;
+    }
   }
 
   &.active {
