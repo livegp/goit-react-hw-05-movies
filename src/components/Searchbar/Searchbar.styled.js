@@ -16,7 +16,7 @@ export const SearchForm = styled(Form)`
   &:hover {
     border-color: #f7f7f7;
   }
-  /* @media (width <= 768px) {
+  /* @media (width <= 576px) {
     display: none;
   } */
 `;

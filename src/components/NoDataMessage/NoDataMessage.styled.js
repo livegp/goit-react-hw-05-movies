@@ -5,7 +5,7 @@ const Container = styled.p`
   grid-column: 1 / 4;
   color: #3b5998;
 
-  @media (width <= 768px) {
+  @media (width <= 576px) {
     grid-row: 6 / 7;
     grid-column: 1 / 3;
   }

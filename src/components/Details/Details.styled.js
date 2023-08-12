@@ -8,7 +8,7 @@ export const Card = styled.div`
   height: 100%;
   font-size: 16px;
 
-  @media (width <= 768px) {
+  @media (width <= 576px) {
     grid-template: auto auto auto auto auto auto auto / 1fr auto;
   }
 `;
@@ -25,7 +25,7 @@ export const Image = styled.img`
     0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   object-fit: cover;
 
-  @media (width <= 768px) {
+  @media (width <= 576px) {
     grid-row: 1 / 2;
     grid-column: 1 / 3;
   }
@@ -38,7 +38,7 @@ export const Title = styled.h1`
   grid-row: 1 / 2;
   grid-column: 2 / 4;
 
-  @media (width <= 768px) {
+  @media (width <= 576px) {
     grid-row: 2 / 3;
     grid-column: 1 / 3;
   }
@@ -49,7 +49,7 @@ export const Genres = styled.p`
   grid-row: 2 / 3;
   grid-column: 2 / 3;
 
-  @media (width <= 768px) {
+  @media (width <= 576px) {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
   }
@@ -61,7 +61,7 @@ export const Rating = styled.p`
   grid-row: 2 / 3;
   grid-column: 3 / 4;
 
-  @media (width <= 768px) {
+  @media (width <= 576px) {
     grid-row: 3 / 4;
     grid-column: 2 / 3;
   }
@@ -74,7 +74,7 @@ export const Overview = styled.p`
   grid-row: 3 / 4;
   grid-column: 2 / 4;
 
-  @media (width <= 768px) {
+  @media (width <= 576px) {
     grid-row: 4 / 5;
     grid-column: 1 / 3;
   }
@@ -92,7 +92,7 @@ export const BtnAdditional = styled.ul`
     width: 100%;
   }
 
-  @media (width <= 768px) {
+  @media (width <= 576px) {
     grid-row: 5 / 6;
     grid-column: 1 / 3;
   }

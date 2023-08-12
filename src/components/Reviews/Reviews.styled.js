@@ -17,7 +17,7 @@ const List = styled.ul`
     line-height: 1.2;
   }
 
-  @media (width <= 768px) {
+  @media (width <= 576px) {
     grid-row: 6 / 7;
     grid-column: 1 / 3;
   }
