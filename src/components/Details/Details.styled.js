@@ -103,7 +103,7 @@ export const Link = styled(NavLink)`
   background-color: #dfe3ee;
   color: #3b5998;
   border-radius: 4px;
-  padding: 5px 10px;
+  padding: 8px 16px;
   display: block;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
