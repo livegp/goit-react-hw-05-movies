@@ -167,7 +167,7 @@ export const StyleNavLink = styled(NavLink)`
     background-color: #dfe3ee;
     color: #3b5998;
   }
-  /* @media (width <= 768px) {
+  /* @media (width <= 576px) {
     display: none;
   } */
 `;
@@ -196,7 +196,7 @@ export const LoginBtn = styled.button`
     }
   }
 
-  @media (width <= 768px) {
+  @media (width <= 576px) {
     display: none;
   }
 `;
