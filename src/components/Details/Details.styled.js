@@ -14,7 +14,7 @@ export const Image = styled.img`
   height: 410px;
   grid-row: 1 / 4;
   grid-column: 1 / 2;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow:
     0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -68,7 +68,7 @@ export const Link = styled(NavLink)`
   text-align: center;
   background-color: #dfe3ee;
   color: #3b5998;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 5px 10px;
   display: block;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
