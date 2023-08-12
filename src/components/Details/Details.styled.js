@@ -3,15 +3,19 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
   display: grid;
-  grid-template: auto auto 1fr auto auto / auto 1fr auto;
+  grid-template: auto auto 1fr auto auto / 1fr 3fr auto;
   gap: 25px;
   height: 100%;
   font-size: 16px;
+
+  @media (width <= 768px) {
+    grid-template: auto auto auto auto auto auto auto / 1fr auto;
+  }
 `;
 
 export const Image = styled.img`
-  width: 273px;
-  height: 410px;
+  width: 100%;
+  height: 100%;
   grid-row: 1 / 4;
   grid-column: 1 / 2;
   border-radius: 4px;
@@ -20,6 +24,11 @@ export const Image = styled.img`
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   object-fit: cover;
+
+  @media (width <= 768px) {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+  }
 `;
 
 export const Title = styled.h1`
@@ -28,12 +37,22 @@ export const Title = styled.h1`
   font-weight: bold;
   grid-row: 1 / 2;
   grid-column: 2 / 4;
+
+  @media (width <= 768px) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
 `;
 
 export const Genres = styled.p`
   color: #3b5998;
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+
+  @media (width <= 768px) {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
 `;
 
 export const Rating = styled.p`
@@ -41,6 +60,11 @@ export const Rating = styled.p`
   color: #3b5998;
   grid-row: 2 / 3;
   grid-column: 3 / 4;
+
+  @media (width <= 768px) {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
 `;
 
 export const Overview = styled.p`
@@ -49,6 +73,11 @@ export const Overview = styled.p`
   line-height: 1.2;
   grid-row: 3 / 4;
   grid-column: 2 / 4;
+
+  @media (width <= 768px) {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3;
+  }
 `;
 
 export const BtnAdditional = styled.ul`
@@ -61,6 +90,11 @@ export const BtnAdditional = styled.ul`
 
   li {
     width: 100%;
+  }
+
+  @media (width <= 768px) {
+    grid-row: 5 / 6;
+    grid-column: 1 / 3;
   }
 `;
 

@@ -16,6 +16,11 @@ const List = styled.ul`
   p {
     line-height: 1.2;
   }
+
+  @media (width <= 768px) {
+    grid-row: 6 / 7;
+    grid-column: 1 / 3;
+  }
 `;
 
 export default List;

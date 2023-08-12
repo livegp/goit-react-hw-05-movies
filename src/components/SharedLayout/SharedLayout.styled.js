@@ -167,6 +167,9 @@ export const StyleNavLink = styled(NavLink)`
     background-color: #dfe3ee;
     color: #3b5998;
   }
+  /* @media (width <= 768px) {
+    display: none;
+  } */
 `;
 
 export const LoginBtn = styled.button`
@@ -191,6 +194,10 @@ export const LoginBtn = styled.button`
     svg {
       stroke: #f7f7f7;
     }
+  }
+
+  @media (width <= 768px) {
+    display: none;
   }
 `;
 

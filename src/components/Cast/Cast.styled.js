@@ -11,6 +11,12 @@ export const List = styled.ul`
   li {
     line-height: 1.2;
   }
+
+  @media (width <= 768px) {
+    grid-row: 6 / 7;
+    grid-column: 1 / 3;
+    column-count: 2;
+  }
 `;
 
 export default List;
