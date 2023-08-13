@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import ScrollToTop from 'react-scroll-up';
 
 import GalleryItem from './GalleryItem/GalleryItem';
-import { Container, Title } from './GalleryList.styled';
+import { Container, ScrollTopIcon, Title } from './GalleryList.styled';
 import LoadBtn from '../LoadBtn/LoadBtn';
 import Loader from '../Loader/Loader';
 
@@ -21,6 +22,9 @@ function GalleryList({ results, title, loading, onLoadMore, total }) {
       {!loading && results.length < total && (
         <LoadBtn onLoadMore={onLoadMore} />
       )}
+      <ScrollToTop showUnder={160} duration={250}>
+        <ScrollTopIcon />
+      </ScrollToTop>
     </>
   );
 }
