@@ -14,5 +14,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font"
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "svg.preview.background": "editor"
 }
