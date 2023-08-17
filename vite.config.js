@@ -38,5 +38,5 @@ export default defineConfig({
     FullReload(['./src/**/**.html']),
     reactClickToComponent()
   ],
-  base: '/vite-react-start/' // має відповідати шляху в index.jsx
+  base: '/goit-react-hw-05-movies/' // має відповідати шляху в index.jsx
 });
