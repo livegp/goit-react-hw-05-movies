@@ -1,18 +1,4 @@
 {
-  "cSpell.ignoreWords": [
-    "Marica",
-    "Roboto",
-    "Searchbar",
-    "Toastify",
-    "Wrappen",
-    "goit",
-    "noninteractive",
-    "pmarica",
-    "safesearch",
-    "stylelint",
-    "webformat",
-    "wght"
-  ],
   "editor.formatOnPaste": false,
   "editor.formatOnSave": true,
   "[javascript]": {
@@ -28,6 +14,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-  "cSpell.words": ["formik", "Phonebook"]
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font"
 }

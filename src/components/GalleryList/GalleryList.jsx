@@ -18,13 +18,13 @@ function GalleryList({ results, title, loading, onLoadMore, total }) {
           ))}
         </Container>
       )}
+      <ScrollToTop showUnder={160}>
+        <ScrollTopIcon />
+      </ScrollToTop>
       {loading && <Loader />}
       {!loading && results.length < total && (
         <LoadBtn onLoadMore={onLoadMore} />
       )}
-      <ScrollToTop showUnder={160} duration={250}>
-        <ScrollTopIcon />
-      </ScrollToTop>
     </>
   );
 }
