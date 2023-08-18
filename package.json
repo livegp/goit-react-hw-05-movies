@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "homepage": "https://livegp.github.io/goit-react-hw-05-movies/",
   "scripts": {
     "start": "vite",
     "build": "vite build",
