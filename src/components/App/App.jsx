@@ -1,5 +1,8 @@
 import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import ScrollToTop from 'react-scroll-up';
+
+import { ScrollTopIcon } from '../GalleryList/GalleryList.styled';
 
 const Loader = lazy(() => import('../Loader/Loader'));
 const SharedLayout = lazy(() => import('../SharedLayout/SharedLayout'));
@@ -25,6 +28,9 @@ function App() {
           {/* <Route path="*" element={<NotFound />} /> */}
         </Route>
       </Routes>
+      <ScrollToTop showUnder={160}>
+        <ScrollTopIcon />
+      </ScrollToTop>
     </Suspense>
   );
 }
