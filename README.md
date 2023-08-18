@@ -1,1 +1,1 @@
-# React + Vite start template
+# React домашнє завдання N05
