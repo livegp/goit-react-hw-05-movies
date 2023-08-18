@@ -29,9 +29,9 @@
       );
     </script> -->
     <script>
-      var url = window.location.href.replace(/\/$/, '');
-      window.history.replaceState(null, null, url);
-      window.location.replace('/');
+      const path = window.location.pathname.slice(1);
+      localStorage.setItem('path', path);
+      window.location.href = '../';
     </script>
   </head>
   <body></body>
