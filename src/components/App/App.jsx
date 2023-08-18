@@ -1,4 +1,4 @@
-import { Component, lazy, Suspense } from 'react';
+import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 const Loader = lazy(() => import('../Loader/Loader'));
@@ -10,52 +10,23 @@ const Cast = lazy(() => import('../Cast/Cast'));
 const Reviews = lazy(() => import('../Reviews/Reviews'));
 // const NotFound = lazy(() => import('../../pages/NotFound'));
 
-class App extends Component {
-  componentDidMount() {
-    const path = localStorage.getItem('path');
-    if (path) {
-      localStorage.removeItem('path');
-      this.props.history.push(path); // eslint-disable-line
-    }
-  }
-
-  render() {
-    return (
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route path="/" element={<SharedLayout />}>
-            <Route index element={<Home />} />
-            <Route path="movies" element={<Movies />} />
-            <Route path="movies/:id" element={<MoviesDetails />}>
-              <Route path="cast" element={<Cast />} />
-              <Route path="reviews" element={<Reviews />} />
-            </Route>
-            <Route path="*" element={<Navigate to="/" />} />
-            {/* <Route path="*" element={<NotFound />} /> */}
+function App() {
+  return (
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="movies" element={<Movies />} />
+          <Route path="movies/:id" element={<MoviesDetails />}>
+            <Route path="cast" element={<Cast />} />
+            <Route path="reviews" element={<Reviews />} />
           </Route>
-        </Routes>
-      </Suspense>
-    );
-  }
+          <Route path="*" element={<Navigate to="/" />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Route>
+      </Routes>
+    </Suspense>
+  );
 }
-
-// function App() {
-//   return (
-//     <Suspense fallback={<Loader />}>
-//       <Routes>
-//         <Route path="/" element={<SharedLayout />}>
-//           <Route index element={<Home />} />
-//           <Route path="movies" element={<Movies />} />
-//           <Route path="movies/:id" element={<MoviesDetails />}>
-//             <Route path="cast" element={<Cast />} />
-//             <Route path="reviews" element={<Reviews />} />
-//           </Route>
-//           <Route path="*" element={<Navigate to="/" />} />
-//           {/* <Route path="*" element={<NotFound />} /> */}
-//         </Route>
-//       </Routes>
-//     </Suspense>
-//   );
-// }
 
 export default App;
