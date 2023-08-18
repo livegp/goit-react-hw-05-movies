@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Movies App</title>
-    <script src="/src/spa/404-spa.js" type="text/javascript"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
       var pathSegmentsToKeep = 1;
@@ -28,6 +27,11 @@
           (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
           l.hash
       );
+    </script> -->
+    <script>
+      var url = window.location.href.replace(/\/$/, '');
+      window.history.replaceState(null, null, url);
+      window.location.replace('/');
     </script>
   </head>
   <body></body>
