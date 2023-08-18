@@ -7,7 +7,7 @@ import GlobalStyle from './styles';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename="/goit-react-hw-05-movies">
       <GlobalStyle />
       <App />
     </BrowserRouter>
