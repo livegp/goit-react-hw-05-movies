@@ -1,0 +1,1 @@
+import{j as a}from"./index-54c6088e.js";import{u as s,G as i}from"./useDataFetching-27559096.js";import"./Loader-c09c3200.js";import"./react-toastify.esm-89acff66.js";import"./fetch-54f914bb.js";function c(){const t="In trend",{results:o,loading:r,total:e,handleLoadMore:n}=s("trending","",1);return a.jsx(i,{results:o,title:t,loading:r,onLoadMore:n,total:e})}export{c as default};
