@@ -1,1 +1,1 @@
-# templates-page-react
+# goit-react-hw-05-movies
