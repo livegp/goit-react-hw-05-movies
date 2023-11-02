@@ -1,4 +1,4 @@
-import{s as e,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-54c6088e.js";import{a as R,b as S}from"./index.esm-00155969.js";import{Q as E}from"./react-toastify.esm-89acff66.js";import{f as D}from"./fetch-54f914bb.js";import d from"./Loader-c09c3200.js";const O=e.div`
+import{s as t,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-cc00a240.js";import{a as R,b as S}from"./index.esm-cceac7c0.js";import{Q as E}from"./react-toastify.esm-1e8011a6.js";import{f as O}from"./fetch-07069c81.js";import d from"./Loader-30f54913.js";const z=t.div`
   display: grid;
   grid-template: auto auto 1fr auto auto / 1fr 3fr auto;
   gap: 25px;
@@ -8,7 +8,7 @@ import{s as e,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-54c6088e.
   @media (width <= 576px) {
     grid-template: auto auto auto auto auto auto auto / 1fr auto;
   }
-`,z=e.img`
+`,B=t.img`
   width: 100%;
   height: 100%;
   grid-row: 1 / 4;
@@ -24,7 +24,7 @@ import{s as e,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-54c6088e.
     grid-row: 1 / 2;
     grid-column: 1 / 3;
   }
-`,B=e.h1`
+`,C=t.h1`
   color: #3b5998;
   font-size: 20px;
   font-weight: bold;
@@ -35,7 +35,7 @@ import{s as e,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-54c6088e.
     grid-row: 2 / 3;
     grid-column: 1 / 3;
   }
-`,C=e.p`
+`,D=t.p`
   color: #3b5998;
   grid-row: 2 / 3;
   grid-column: 2 / 3;
@@ -44,7 +44,7 @@ import{s as e,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-54c6088e.
     grid-row: 3 / 4;
     grid-column: 1 / 2;
   }
-`,_=e.p`
+`,_=t.p`
   display: flex;
   color: #3b5998;
   grid-row: 2 / 3;
@@ -54,7 +54,7 @@ import{s as e,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-54c6088e.
     grid-row: 3 / 4;
     grid-column: 2 / 3;
   }
-`,$=e.p`
+`,$=t.p`
   color: #3b5998;
   text-align: justify;
   line-height: 1.2;
@@ -65,7 +65,7 @@ import{s as e,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-54c6088e.
     grid-row: 4 / 5;
     grid-column: 1 / 3;
   }
-`,A=e.ul`
+`,A=t.ul`
   color: #3b5998;
   grid-row: 4 / 5;
   grid-column: 1 / 2;
@@ -81,7 +81,7 @@ import{s as e,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-54c6088e.
     grid-row: 5 / 6;
     grid-column: 1 / 3;
   }
-`,p=e(j)`
+`,p=t(j)`
   text-align: center;
   background-color: #dfe3ee;
   color: #3b5998;
@@ -103,7 +103,7 @@ import{s as e,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-54c6088e.
     background-color: #3b5998;
     color: #dfe3ee;
   }
-`,F=e(v)`
+`,F=t(v)`
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -117,8 +117,8 @@ import{s as e,N as j,L as v,j as o,b as k,r,a as L,O as y}from"./index-54c6088e.
   :hover {
     color: #3b5998;
   }
-`,I=e.div`
+`,I=t.div`
   display: inline-flex;
   align-items: center;
   gap: 4px;
-`;function P({to:i}){return o.jsx(F,{to:i,children:o.jsxs(I,{children:[o.jsx(R,{size:"24"}),o.jsx("p",{children:"Back"})]})})}const T="https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700";function U(){var c;const{id:i}=k(),[n,x]=r.useState(null),[g,a]=r.useState(!1),u=L(),m=r.useRef(((c=u.state)==null?void 0:c.from)??"/");if(r.useEffect(()=>{i&&(a(!0),D("movieDetails","","",i).then(t=>{x(t),a(!1)}).catch(t=>{E.error(`Error fetching data: ${t.message}`),a(!1)}))},[i]),!i)return null;if(g)return o.jsx(d,{});if(!n)return null;const{title:s,genres:f,vote_average:h,overview:b,poster_path:l}=n,w=l?`https://image.tmdb.org/t/p/w500${l}`:T;return o.jsxs(o.Fragment,{children:[o.jsx(P,{to:m.current}),o.jsxs(O,{children:[o.jsx(z,{src:w,alt:s}),o.jsx(B,{children:s}),o.jsx(C,{children:f.map(({name:t})=>t).join(", ")}),o.jsxs(_,{children:[o.jsx(S,{})," ",h.toFixed(1)]}),o.jsx($,{children:b}),o.jsxs(A,{children:[o.jsx("li",{children:o.jsx(p,{to:"cast",children:"Cast"})}),o.jsx("li",{children:o.jsx(p,{to:"reviews",children:"Reviews"})})]}),o.jsx(r.Suspense,{fallback:o.jsx(d,{}),children:o.jsx(y,{})})]})]})}function J(){return o.jsx(U,{})}export{J as default};
+`;function P({to:i}){return o.jsx(F,{to:i,children:o.jsxs(I,{children:[o.jsx(R,{size:"24"}),o.jsx("p",{children:"Back"})]})})}const T="https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700";function U(){var l;const{id:i}=k(),[a,x]=r.useState(),[g,s]=r.useState(!1),u=L(),m=r.useRef(((l=u.state)==null?void 0:l.from)??"/");if(r.useEffect(()=>{i&&(s(!0),O("movieDetails","","",i).then(e=>(s(!1),x(e),e)).catch(e=>{throw E.error(`Error fetching data: ${e.message}`),s(!1),e}))},[i]),!i||g||!a)return o.jsx(d,{});const{title:n,genres:f,vote_average:h,overview:b,poster_path:c}=a,w=c?`https://image.tmdb.org/t/p/w500${c}`:T;return o.jsxs(o.Fragment,{children:[o.jsx(P,{to:m.current}),o.jsxs(z,{children:[o.jsx(B,{src:w,alt:n}),o.jsx(C,{children:n}),o.jsx(D,{children:f.map(({name:e})=>e).join(", ")}),o.jsxs(_,{children:[o.jsx(S,{})," ",h.toFixed(1)]}),o.jsx($,{children:b}),o.jsxs(A,{children:[o.jsx("li",{children:o.jsx(p,{to:"cast",children:"Cast"})}),o.jsx("li",{children:o.jsx(p,{to:"reviews",children:"Reviews"})})]}),o.jsx(r.Suspense,{fallback:o.jsx(d,{}),children:o.jsx(y,{})})]})]})}function J(){return o.jsx(U,{})}export{J as default};
