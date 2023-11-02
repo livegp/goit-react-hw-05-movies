@@ -8,12 +8,12 @@ import {
   Footer,
   Logo,
   Nav,
-  LoginBtn,
   ContainerHeader,
   Wrappen,
   Container,
   Main,
-  StyleNavLink
+  StyleNavLink,
+  LoginButton,
 } from './SharedLayout.styled';
 import Loader from '../Loader/Loader';
 import Searchbar from '../Searchbar/Searchbar';
@@ -39,9 +39,9 @@ function SharedLayout() {
             </ul>
           </Nav>
           <Searchbar />
-          <LoginBtn type="button">
+          <LoginButton type="button">
             <IoLogInOutline />
-          </LoginBtn>
+          </LoginButton>
         </ContainerHeader>
       </Header>
       <Main>
@@ -60,8 +60,7 @@ function SharedLayout() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://www.linkedin.com/in/oleksandr-pishta"
-            >
+              href="https://www.linkedin.com/in/oleksandr-pishta">
               Oleksandr Pishta
             </a>
           </p>

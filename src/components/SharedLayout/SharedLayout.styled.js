@@ -2,9 +2,9 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Wrappen = styled.div`
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
 `;
 
 export const Container = styled.div`
@@ -172,7 +172,7 @@ export const StyleNavLink = styled(NavLink)`
   } */
 `;
 
-export const LoginBtn = styled.button`
+export const LoginButton = styled.button`
   order: 5;
   margin-top: 0;
   background: transparent;
@@ -202,7 +202,6 @@ export const LoginBtn = styled.button`
 `;
 
 export const Main = styled.main`
-  flex-grow: 1;
   background-color: #f7f7f7;
 `;
 

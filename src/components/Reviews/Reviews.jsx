@@ -21,6 +21,7 @@ function Reviews() {
       .then(data => {
         setReviews(data.results);
         setLoading(false);
+        return data;
       })
       .catch(error => {
         toast.error(`Error fetching data: ${error.message}`);

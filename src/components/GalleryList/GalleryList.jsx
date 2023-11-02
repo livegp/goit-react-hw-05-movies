@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import GalleryItem from './GalleryItem/GalleryItem';
 import { Container, Title } from './GalleryList.styled';
-import LoadBtn from '../LoadBtn/LoadBtn';
+import LoadButton from '../LoadButton/LoadButton';
 import Loader from '../Loader/Loader';
 
 function GalleryList({ results, title, loading, onLoadMore, total }) {
@@ -19,7 +19,7 @@ function GalleryList({ results, title, loading, onLoadMore, total }) {
       )}
       {loading && <Loader />}
       {!loading && results.length < total && (
-        <LoadBtn onLoadMore={onLoadMore} />
+        <LoadButton onLoadMore={onLoadMore} />
       )}
     </>
   );
@@ -30,13 +30,13 @@ GalleryList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       poster_path: PropTypes.string,
-      title: PropTypes.string.isRequired
-    }).isRequired
+      title: PropTypes.string.isRequired,
+    }).isRequired,
   ).isRequired,
   title: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   onLoadMore: PropTypes.func.isRequired,
-  total: PropTypes.number.isRequired
+  total: PropTypes.number.isRequired,
 };
 
 export default GalleryList;

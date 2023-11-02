@@ -5,25 +5,27 @@ import GalleryList from '../components/GalleryList/GalleryList';
 import useDataFetching from '../services/useDataFetching';
 
 function Movies() {
-  const [searchQuery, setSearchQuery] = useState(null);
+  const [searchQuery, setSearchQuery] = useState();
   const location = useLocation();
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    const query = searchParams.get('query');
+    const searchParameters = new URLSearchParams(location.search);
+    const query = searchParameters.get('query');
     if (query !== null) {
-      setSearchQuery(prevQuery => (prevQuery !== query ? query : prevQuery));
+      setSearchQuery(previousQuery =>
+        previousQuery === query ? previousQuery : query,
+      );
     }
   }, [location]);
 
   const { results, loading, total, handleLoadMore } = useDataFetching(
     'searchMovies',
     searchQuery,
-    1
+    1,
   );
 
   let title;
-  if (searchQuery !== null) {
+  if (searchQuery) {
     title = `Nothing was found for the search query "${searchQuery}".`;
     if (Array.isArray(results) && results.length > 0) {
       title = `You searched for "${searchQuery}"`;

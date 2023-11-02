@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Btn = styled.button`
+const Button = styled.button`
   display: flex;
   margin: 25px auto 0;
   padding: 8px 16px;
@@ -30,4 +30,4 @@ const Btn = styled.button`
   }
 `;
 
-export default Btn;
+export default Button;

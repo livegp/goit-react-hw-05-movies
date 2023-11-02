@@ -26,8 +26,8 @@ GalleryItem.propTypes = {
   post: PropTypes.shape({
     id: PropTypes.number.isRequired,
     poster_path: PropTypes.string,
-    title: PropTypes.string.isRequired
-  }).isRequired
+    title: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default GalleryItem;

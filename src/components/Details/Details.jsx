@@ -1,17 +1,17 @@
-import { useState, useEffect, Suspense, useRef } from 'react';
+import React, { useState, useEffect, Suspense, useRef } from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import {
-  BtnAdditional,
+  ButtonAdditional,
   Card,
   Genres,
   Image,
   Link,
   Overview,
   Rating,
-  Title
+  Title,
 } from './Details.styled';
 import fetch from '../../services/fetch';
 import BackLink from '../BackLink/BackLink';
@@ -22,7 +22,7 @@ const defaultImg =
 
 function Details() {
   const { id } = useParams();
-  const [movieDetails, setMovieDetails] = useState(null);
+  const [movieDetails, setMovieDetails] = useState();
   const [loading, setLoading] = useState(false);
   const location = useLocation();
   const backLink = useRef(location.state?.from ?? '/');
@@ -36,25 +36,19 @@ function Details() {
 
     fetch('movieDetails', '', '', id)
       .then(newData => {
-        setMovieDetails(newData);
         setLoading(false);
+        setMovieDetails(newData);
+        return newData;
       })
       .catch(error => {
         toast.error(`Error fetching data: ${error.message}`);
         setLoading(false);
+        throw error;
       });
   }, [id]);
 
-  if (!id) {
-    return null;
-  }
-
-  if (loading) {
+  if (!id || loading || !movieDetails) {
     return <Loader />;
-  }
-
-  if (!movieDetails) {
-    return null;
   }
 
   const {
@@ -62,7 +56,7 @@ function Details() {
     genres,
     vote_average: rating,
     overview,
-    poster_path: poster
+    poster_path: poster,
   } = movieDetails;
   const POSTER_URL = `https://image.tmdb.org/t/p/w500`;
   const url = poster ? `${POSTER_URL}${poster}` : defaultImg;
@@ -78,14 +72,14 @@ function Details() {
           <AiFillStar /> {rating.toFixed(1)}
         </Rating>
         <Overview>{overview}</Overview>
-        <BtnAdditional>
+        <ButtonAdditional>
           <li>
             <Link to="cast">Cast</Link>
           </li>
           <li>
             <Link to="reviews">Reviews</Link>
           </li>
-        </BtnAdditional>
+        </ButtonAdditional>
         <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>

@@ -1,1 +1,1 @@
-# React домашнє завдання N05
+# templates-page-react

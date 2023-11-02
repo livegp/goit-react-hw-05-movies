@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { toast } from 'react-toastify';
 
 import fetch from './fetch';
@@ -10,25 +10,28 @@ const useDataFetching = (endpoint, searchIn, initialPage = 1) => {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState(searchIn);
 
-  const fetchData = () => {
+  const fetchData = useCallback(() => {
     setLoading(true);
 
     fetch(endpoint, search, page)
       .then(newData => {
         setTotal(newData.total_results);
-        setResults(prevResults =>
-          page === 1 ? newData.results : [...prevResults, ...newData.results]
+        setResults(previousResults =>
+          page === 1
+            ? newData.results
+            : [...previousResults, ...newData.results],
         );
         setLoading(false);
+        return newData;
       })
       .catch(error => {
         toast.error(`Error fetching data: ${error.message}`);
         setLoading(false);
       });
-  };
+  }, [endpoint, search, page]);
 
   const handleLoadMore = () => {
-    setPage(prevPage => prevPage + 1);
+    setPage(previousPage => previousPage + 1);
   };
 
   useEffect(() => {
@@ -38,13 +41,13 @@ const useDataFetching = (endpoint, searchIn, initialPage = 1) => {
       setSearch(searchIn);
     }
     fetchData();
-  }, [searchIn, page, search]); // eslint-disable-line
+  }, [searchIn, page, search, fetchData]);
 
   return {
     results,
     loading,
     total,
-    handleLoadMore
+    handleLoadMore,
   };
 };
 

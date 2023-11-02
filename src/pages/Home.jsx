@@ -7,7 +7,7 @@ function Home() {
   const { results, loading, total, handleLoadMore } = useDataFetching(
     'trending',
     '',
-    1
+    1,
   );
 
   return (

@@ -17,14 +17,21 @@ function Cast() {
       return;
     }
 
+    setLoading(true);
+
     fetch('movieCredits', '', '', id)
       .then(data => {
         setCast(data.cast);
+        return data;
+      })
+      .then(data => {
         setLoading(false);
+        return data;
       })
       .catch(error => {
-        toast.error(`Error fetching data: ${error.message}`);
         setLoading(false);
+        toast.error(`Error fetching data: ${error.message}`);
+        throw error;
       });
   }, [id]);
 

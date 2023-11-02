@@ -80,7 +80,7 @@ export const Overview = styled.p`
   }
 `;
 
-export const BtnAdditional = styled.ul`
+export const ButtonAdditional = styled.ul`
   color: #3b5998;
   grid-row: 4 / 5;
   grid-column: 1 / 2;
