@@ -7,11 +7,11 @@ export const SearchForm = styled(Form)`
   width: 100%;
   max-width: 300px;
   border: 2px solid rgba(var(--bg-primary), 1);
-  background-color: transparent;
   border-radius: 4px;
   overflow: hidden;
   order: 3;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  transition: var(--trans);
 
   &:hover {
     border-color: rgba(var(--bg-primary), 0.7);
@@ -22,18 +22,18 @@ export const SearchForm = styled(Form)`
 `;
 
 export const SearchFormButton = styled.button`
-  background-color: rgba(var(--bg-primary), 1);
   padding: 0;
   color: rgba(var(--text), 1);
   width: 36px;
   height: 36px;
   border: 0;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(var(--bg-primary), 1);
+  transition: var(--trans);
 
   &:hover {
     background-color: rgba(var(--bg-primary), 0.7);
@@ -43,6 +43,7 @@ export const SearchFormButton = styled.button`
     width: 25px;
     height: 25px;
     fill: rgba(var(--text), 1);
+    transition: var(--trans);
   }
 `;
 
@@ -62,20 +63,22 @@ export const SearchFormInput = styled(Field)`
   display: inline-block;
   width: 100%;
   font: inherit;
-  color: rgba(var(--text-primary), 0.7);
   font-size: 20px;
   border: none;
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
-  background-color: transparent;
   color-scheme: dark;
+  color: rgba(var(--text-primary), 0.7);
+  background-color: transparent;
+  transition: var(--trans);
 
   &::placeholder {
-    background-color: transparent;
-    color: rgba(var(--text-primary), 0.7);
     font: inherit;
     font-size: 18px;
+    background-color: transparent;
+    color: rgba(var(--text-primary), 0.7);
+    transition: var(--trans);
   }
 
   input:-webkit-autofill,

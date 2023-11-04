@@ -5,8 +5,9 @@ const List = styled.ul`
   gap: 25px;
   grid-row: 5 / 6;
   grid-column: 1 / 4;
-  color: rgba(var(--text), 1);
   text-align: justify;
+  color: rgba(var(--text), 1);
+  transition: var(--trans);
 
   h3 {
     font-weight: 600;

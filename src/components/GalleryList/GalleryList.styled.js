@@ -15,10 +15,11 @@ export const Container = styled.ul`
 `;
 
 export const Title = styled.h1`
-  color: rgba(var(--text), 1);
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 25px;
+  color: rgba(var(--text), 1);
+  transition: var(--trans);
 `;
 
 export const ScrollTopIcon = styled(IoIosArrowDropup)`
@@ -28,7 +29,7 @@ export const ScrollTopIcon = styled(IoIosArrowDropup)`
   opacity: 0.6;
   border-radius: 50%;
   fill: rgba(var(--text), 1);
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--trans);
 
   &:hover {
     opacity: 0.8;

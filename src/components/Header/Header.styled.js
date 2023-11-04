@@ -4,8 +4,9 @@ import styled from 'styled-components';
 export const HeaderBox = styled.header`
   position: sticky;
   top: 0;
-  background-color: rgba(var(--accent), 1);
   z-index: 10;
+  background-color: rgba(var(--accent), 1);
+  transition: var(--trans);
 
   .header .menu-btn:checked ~ .nav {
     position: absolute;
@@ -101,7 +102,7 @@ export const Logo = styled.div`
     width: 40px;
     height: 40px;
     fill: rgba(var(--bg-primary), 1);
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--trans);
   }
 
   &:hover {
@@ -131,15 +132,15 @@ export const Nav = styled.nav`
 
 export const StyleNavLink = styled(NavLink)`
   display: block;
-  background-color: transparent;
   border-radius: 4px;
   border: 2px solid transparent;
   padding: 8px;
   order: 0;
-  color: rgba(var(--text-primary), 1);
   font-size: 20px;
   font-weight: bold;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  color: rgba(var(--text-primary), 1);
+  transition: var(--trans);
 
   &:hover {
     color: rgba(var(--text-primary), 1);
@@ -163,19 +164,20 @@ export const StyleNavLink = styled(NavLink)`
 export const LoginButton = styled.button`
   order: 5;
   margin-top: 0;
-  background: transparent;
   border-width: 0;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   display: block;
   flex-basis: auto;
   align-items: center;
+  background-color: transparent;
+  transition: var(--trans);
 
   svg {
     display: block;
     width: 40px;
     height: 40px;
     stroke: rgba(var(--bg-primary), 1);
+    transition: var(--trans);
   }
 
   &:hover {
