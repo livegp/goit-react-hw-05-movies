@@ -1,4 +1,4 @@
-import{s as $,j as g,G as Ne,N as Ft,g as Mt,r as l,u as Rt,W as Pt,L as Lt,O as kt}from"./index-55b2e1f9.js";import{A as Dt,I as Vt}from"./index.esm-bad5f4ee.js";import{Q as Nt}from"./react-toastify.esm-79e6af07.js";import Ut from"./Loader-60b357a7.js";const Bt=$.div`
+import{s as $,j as g,G as Ne,N as Ft,g as Mt,r as l,u as Rt,W as Pt,L as Lt,O as kt}from"./index-435de195.js";import{A as Dt,I as Vt}from"./index.esm-c6e0ca95.js";import{Q as Nt}from"./react-toastify.esm-e5a60533.js";import Ut from"./Loader-e0b37aaa.js";const Bt=$.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
@@ -118,7 +118,7 @@ import{s as $,j as g,G as Ne,N as Ft,g as Mt,r as l,u as Rt,W as Pt,L as Lt,O as
 
   &:hover {
     svg {
-      fill: rgba(var(--bg-primary), 1);
+      fill: rgba(var(--bg-primary), 0.7);
     }
   }
 `,Zt=$.nav`
@@ -154,14 +154,14 @@ import{s as $,j as g,G as Ne,N as Ft,g as Mt,r as l,u as Rt,W as Pt,L as Lt,O as
     border: 2px solid rgba(var(--bg-primary), 1);
 
     &.active {
-      background-color: rgba(var(--bg-primary), 1);
-      border: 2px solid rgba(var(--bg-primary), 1);
+      background-color: rgba(var(--bg-primary), 0.7);
+      border: 2px solid rgba(var(--bg-primary), 0);
     }
   }
 
   &.active {
     background-color: rgba(var(--bg-primary), 1);
-    color: rgba(var(--accent), 1);
+    color: rgba(var(--text), 1);
   }
   /* @media (width <= 576px) {
     display: none;
@@ -186,7 +186,7 @@ import{s as $,j as g,G as Ne,N as Ft,g as Mt,r as l,u as Rt,W as Pt,L as Lt,O as
 
   &:hover {
     svg {
-      stroke: rgba(var(--bg-primary), 1);
+      stroke: rgba(var(--bg-primary), 0.7);
     }
   }
 
@@ -198,7 +198,7 @@ import{s as $,j as g,G as Ne,N as Ft,g as Mt,r as l,u as Rt,W as Pt,L as Lt,O as
   align-items: center;
   width: 100%;
   max-width: 300px;
-  border: 2px solid rgba(var(--bg-primary), 0.7);
+  border: 2px solid rgba(var(--bg-primary), 1);
   background-color: transparent;
   border-radius: 4px;
   overflow: hidden;
@@ -206,15 +206,15 @@ import{s as $,j as g,G as Ne,N as Ft,g as Mt,r as l,u as Rt,W as Pt,L as Lt,O as
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    border-color: rgba(var(--bg-primary), 1);
+    border-color: rgba(var(--bg-primary), 0.7);
   }
   /* @media (width <= 576px) {
     display: none;
   } */
 `,Uc=$.button`
-  background-color: rgba(var(--bg-primary), 0.7);
+  background-color: rgba(var(--bg-primary), 1);
   padding: 0;
-  color: #3b5998;
+  color: rgba(var(--text), 1);
   width: 36px;
   height: 36px;
   border: 0;
@@ -226,13 +226,13 @@ import{s as $,j as g,G as Ne,N as Ft,g as Mt,r as l,u as Rt,W as Pt,L as Lt,O as
   align-items: center;
 
   &:hover {
-    background-color: rgba(var(--bg-primary), 1);
+    background-color: rgba(var(--bg-primary), 0.7);
   }
 
   svg {
     width: 25px;
     height: 25px;
-    fill: #3b5998;
+    fill: rgba(var(--text), 1);
   }
 `,Bc=$.label`
   position: absolute;
@@ -279,12 +279,12 @@ import{s as $,j as g,G as Ne,N as Ft,g as Mt,r as l,u as Rt,W as Pt,L as Lt,O as
 
   svg {
     font-size: 30px;
-    fill: rgba(var(--bg-primary), 0.7);
+    fill: rgba(var(--bg-primary), 1);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   :hover svg {
-    fill: rgba(var(--bg-primary), 1);
+    fill: rgba(var(--bg-primary), 0.7);
   }
 
   input {
