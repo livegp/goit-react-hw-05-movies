@@ -198,6 +198,10 @@ ${Np}
 
 ${Ip}
 
+:root {
+  --trans: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 [data-theme='light'] {
   --accent: 58,87,149;
   --bg-primary: 237,240,245;
@@ -205,6 +209,7 @@ ${Ip}
   --text: 58,87,149;
   --text-primary: 237,240,245;
   --text-secondary: 58,87,149;
+  transition: var(--trans);
 }
 
 [data-theme='dark'] {
@@ -214,6 +219,7 @@ ${Ip}
   --text: 173,185,211;
   --text-primary: 237,240,245;
   --text-secondary: 58,87,149;
+  transition: var(--trans);
 }
 
 *,
@@ -233,25 +239,29 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   overflow-y: scroll;
-  color: var(--text-primary);
-  background-color: rgba(var(--bg-primary), 1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(var(--bg-primary), 1);
+  color: var(--text-primary);
 }
 
 body::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
+
 body::-webkit-scrollbar-track {
   background: rgba(var(--accent), 0.5);
 }
+
 body::-webkit-scrollbar-thumb {
   background: rgba(var(--accent), 1);
 }
+
 body::-webkit-scrollbar-thumb:hover {
   background: rgba(var(--accent), 0.7);
 }
+
 body::-webkit-scrollbar-thumb:active {
   background: rgba(var(--accent), 1);
 }
@@ -281,10 +291,11 @@ img {
   margin-left: auto;
   margin-right: auto;
 `,sg=ti.h1`
-  color: rgba(var(--text), 1);
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 25px;
+  color: rgba(var(--text), 1);
+  transition: var(--trans);
 `,Xy=ti(Ky)`
   height: 50px;
   width: 50px;
@@ -292,10 +303,10 @@ img {
   opacity: 0.6;
   border-radius: 50%;
   fill: rgba(var(--text), 1);
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--trans);
 
   &:hover {
     opacity: 0.8;
     fill: rgba(var(--accent), 1);
   }
-`,Zy=k.lazy(()=>Pn(()=>import("./Loader-e0b37aaa.js"),[])),Jy=k.lazy(()=>Pn(()=>import("./SharedLayout-ad130e39.js"),["assets/SharedLayout-ad130e39.js","assets/index.esm-c6e0ca95.js","assets/react-toastify.esm-e5a60533.js","assets/Loader-e0b37aaa.js"])),qy=k.lazy(()=>Pn(()=>import("./Home-0746acd5.js"),["assets/Home-0746acd5.js","assets/useDataFetching-add2a770.js","assets/Loader-e0b37aaa.js","assets/react-toastify.esm-e5a60533.js","assets/fetch-90c42a9f.js"])),by=k.lazy(()=>Pn(()=>import("./Movies-ad9b9c98.js"),["assets/Movies-ad9b9c98.js","assets/useDataFetching-add2a770.js","assets/Loader-e0b37aaa.js","assets/react-toastify.esm-e5a60533.js","assets/fetch-90c42a9f.js"])),eg=k.lazy(()=>Pn(()=>import("./MoviesDetails-9df8734a.js"),["assets/MoviesDetails-9df8734a.js","assets/index.esm-c6e0ca95.js","assets/react-toastify.esm-e5a60533.js","assets/fetch-90c42a9f.js","assets/Loader-e0b37aaa.js"])),tg=k.lazy(()=>Pn(()=>import("./Cast-dbecb246.js"),["assets/Cast-dbecb246.js","assets/react-toastify.esm-e5a60533.js","assets/fetch-90c42a9f.js","assets/Loader-e0b37aaa.js","assets/NoDataMessage-90423909.js"])),ng=k.lazy(()=>Pn(()=>import("./Reviews-bd667f50.js"),["assets/Reviews-bd667f50.js","assets/react-toastify.esm-e5a60533.js","assets/fetch-90c42a9f.js","assets/Loader-e0b37aaa.js","assets/NoDataMessage-90423909.js"]));function rg(){return ee.jsxs(ee.Fragment,{children:[ee.jsx(Hy,{}),ee.jsxs(k.Suspense,{fallback:ee.jsx(Zy,{}),children:[ee.jsx(Zv,{children:ee.jsxs(jt,{path:"/",element:ee.jsx(Jy,{}),children:[ee.jsx(jt,{index:!0,element:ee.jsx(qy,{})}),ee.jsx(jt,{path:"movies",element:ee.jsx(by,{})}),ee.jsxs(jt,{path:"movies/:id",element:ee.jsx(eg,{}),children:[ee.jsx(jt,{path:"cast",element:ee.jsx(tg,{})}),ee.jsx(jt,{path:"reviews",element:ee.jsx(ng,{})})]}),ee.jsx(jt,{path:"*",element:ee.jsx(Kv,{to:"/"})})]})}),ee.jsx(j0,{showUnder:160,children:ee.jsx(Xy,{})})]})]})}$i.createRoot(document.querySelector("#root")).render(ee.jsx(ce.StrictMode,{children:ee.jsx(n0,{basename:"/goit-react-hw-05-movies/",children:ee.jsx(rg,{})})}));export{ag as C,Yy as G,l0 as L,ig as N,lg as O,ug as P,sg as T,jy as W,ar as a,og as b,hl as g,ee as j,k as r,ti as s,ce as t,qd as u};
+`,Zy=k.lazy(()=>Pn(()=>import("./Loader-d2db7f26.js"),[])),Jy=k.lazy(()=>Pn(()=>import("./SharedLayout-c88efabd.js"),["assets/SharedLayout-c88efabd.js","assets/index.esm-59aa8364.js","assets/react-toastify.esm-fd450294.js","assets/Loader-d2db7f26.js"])),qy=k.lazy(()=>Pn(()=>import("./Home-1af5913b.js"),["assets/Home-1af5913b.js","assets/useDataFetching-079c7dc9.js","assets/Loader-d2db7f26.js","assets/react-toastify.esm-fd450294.js","assets/fetch-e96fe894.js"])),by=k.lazy(()=>Pn(()=>import("./Movies-249a5380.js"),["assets/Movies-249a5380.js","assets/useDataFetching-079c7dc9.js","assets/Loader-d2db7f26.js","assets/react-toastify.esm-fd450294.js","assets/fetch-e96fe894.js"])),eg=k.lazy(()=>Pn(()=>import("./MoviesDetails-24a2033a.js"),["assets/MoviesDetails-24a2033a.js","assets/index.esm-59aa8364.js","assets/react-toastify.esm-fd450294.js","assets/fetch-e96fe894.js","assets/Loader-d2db7f26.js"])),tg=k.lazy(()=>Pn(()=>import("./Cast-27aaea7f.js"),["assets/Cast-27aaea7f.js","assets/react-toastify.esm-fd450294.js","assets/fetch-e96fe894.js","assets/Loader-d2db7f26.js","assets/NoDataMessage-2f765900.js"])),ng=k.lazy(()=>Pn(()=>import("./Reviews-5f527321.js"),["assets/Reviews-5f527321.js","assets/react-toastify.esm-fd450294.js","assets/fetch-e96fe894.js","assets/Loader-d2db7f26.js","assets/NoDataMessage-2f765900.js"]));function rg(){return ee.jsxs(ee.Fragment,{children:[ee.jsx(Hy,{}),ee.jsxs(k.Suspense,{fallback:ee.jsx(Zy,{}),children:[ee.jsx(Zv,{children:ee.jsxs(jt,{path:"/",element:ee.jsx(Jy,{}),children:[ee.jsx(jt,{index:!0,element:ee.jsx(qy,{})}),ee.jsx(jt,{path:"movies",element:ee.jsx(by,{})}),ee.jsxs(jt,{path:"movies/:id",element:ee.jsx(eg,{}),children:[ee.jsx(jt,{path:"cast",element:ee.jsx(tg,{})}),ee.jsx(jt,{path:"reviews",element:ee.jsx(ng,{})})]}),ee.jsx(jt,{path:"*",element:ee.jsx(Kv,{to:"/"})})]})}),ee.jsx(j0,{showUnder:160,children:ee.jsx(Xy,{})})]})]})}$i.createRoot(document.querySelector("#root")).render(ee.jsx(ce.StrictMode,{children:ee.jsx(n0,{basename:"/goit-react-hw-05-movies/",children:ee.jsx(rg,{})})}));export{ag as C,Yy as G,l0 as L,ig as N,lg as O,ug as P,sg as T,jy as W,ar as a,og as b,hl as g,ee as j,k as r,ti as s,ce as t,qd as u};
