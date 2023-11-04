@@ -1,9 +1,8 @@
 import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import ScrollToTop from 'react-scroll-up';
 
 import GlobalStyle from '../../GlobalStyle.styled';
-import { ScrollTopIcon } from '../GalleryList/GalleryList.styled';
+import ScrollTop from '../ScrollTop/ScrollTop';
 
 // const NotFound = lazy(() => import('../../pages/NotFound'));
 
@@ -19,6 +18,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
+      <ScrollTop />
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<SharedLayout />}>
@@ -32,9 +32,6 @@ function App() {
             {/* <Route path="*" element={<NotFound />} /> */}
           </Route>
         </Routes>
-        <ScrollToTop showUnder={160}>
-          <ScrollTopIcon />
-        </ScrollToTop>
       </Suspense>
     </>
   );

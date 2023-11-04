@@ -1,4 +1,3 @@
-import { IoIosArrowDropup } from 'react-icons/io';
 import styled from 'styled-components';
 
 export const Container = styled.ul`
@@ -20,19 +19,4 @@ export const Title = styled.h1`
   margin-bottom: 25px;
   color: rgba(var(--text), 1);
   transition: var(--trans);
-`;
-
-export const ScrollTopIcon = styled(IoIosArrowDropup)`
-  height: 50px;
-  width: 50px;
-  background-color: rgba(var(--bg-primary), 1);
-  opacity: 0.6;
-  border-radius: 50%;
-  fill: rgba(var(--text), 1);
-  transition: var(--trans);
-
-  &:hover {
-    opacity: 0.8;
-    fill: rgba(var(--accent), 1);
-  }
 `;
