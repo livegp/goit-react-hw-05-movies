@@ -15,8 +15,10 @@ export const LabelToggleTheme = styled.label`
     transition: var(--trans);
   }
 
-  :hover svg {
-    fill: rgba(var(--bg-primary), 0.7);
+  &:hover {
+    svg {
+      fill: rgba(var(--bg-primary), 0.7);
+    }
   }
 
   input {
