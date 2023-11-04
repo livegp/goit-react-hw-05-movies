@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const FooterBox = styled.footer`
-  color: #dfe3ee;
-  background-color: #3b5998;
+  color: rgba(var(--text-primary), 1);
+  background-color: rgba(var(--accent), 1);
 
   a {
     color: #dfe3ee;

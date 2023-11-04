@@ -15,7 +15,7 @@ export const Container = styled.ul`
 `;
 
 export const Title = styled.h1`
-  color: #8b9dc3;
+  color: rgba(var(--text), 1);
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 25px;
@@ -24,14 +24,14 @@ export const Title = styled.h1`
 export const ScrollTopIcon = styled(IoIosArrowDropup)`
   height: 50px;
   width: 50px;
-  background-color: #dfe3ee;
+  background-color: rgba(var(--bg-primary), 1);
   opacity: 0.6;
   border-radius: 50%;
-  fill: #8b9dc3;
+  fill: rgba(var(--text), 1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     opacity: 0.8;
-    fill: #3b5998;
+    fill: rgba(var(--accent), 1);
   }
 `;

@@ -5,10 +5,10 @@ const Button = styled.button`
   margin: 25px auto 0;
   padding: 8px 16px;
   border-radius: 4px;
-  background-color: #3b5998;
+  background-color: rgba(var(--accent), 1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
-  color: #dfe3ee;
+  color: rgba(var(--text-primary), 1);
   border: 0;
   text-decoration: none;
   cursor: pointer;
@@ -26,7 +26,7 @@ const Button = styled.button`
   &:hover,
   &:focus {
     background-color: #dfe3ee;
-    color: #3b5998;
+    color: rgba(var(--accent), 1);
   }
 `;
 

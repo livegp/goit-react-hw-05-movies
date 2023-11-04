@@ -8,6 +8,24 @@ ${normalize}
 
 ${reset}
 
+[data-theme='light'] {
+  --accent: 58,87,149;
+  --bg-primary: 237,240,245;
+  --bg-secondary: 99,123,173;
+  --text: 173,185,211;
+  --text-primary: 237,240,245;
+  --text-secondary: 58,87,149;
+}
+
+[data-theme='dark'] {
+  --accent: 58,87,149;
+  --bg-primary: 51,51,51;
+  --bg-secondary: 51,51,51;
+  --text: 173,185,211;
+  --text-primary: 237,240,245;
+  --text-secondary: 58,87,149;
+}
+
 *,
 ::after,
 ::before {
@@ -24,9 +42,9 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  color: #212121;
   overflow-y: scroll;
-  background-color: #fff;
+  color: var(--text-primary);
+  background-color: rgba(var(--bg-primary), 1);;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

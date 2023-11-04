@@ -11,6 +11,7 @@ import {
   HeaderBox,
 } from './Header.styled';
 import Searchbar from '../Searchbar/Searchbar';
+import ToggleTheme from '../ToggleTheme/ToggleTheme';
 
 function Header() {
   return (
@@ -32,6 +33,7 @@ function Header() {
           </ul>
         </Nav>
         <Searchbar />
+        <ToggleTheme />
         <LoginButton type="button">
           <IoLogInOutline />
         </LoginButton>

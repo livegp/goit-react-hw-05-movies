@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const HeaderBox = styled.header`
   position: sticky;
   top: 0;
-  background-color: #3b5998;
+  background-color: rgba(var(--accent), 1);
   z-index: 10;
 
   .header .menu-btn:checked ~ .nav {
@@ -100,13 +100,13 @@ export const Logo = styled.div`
     display: block;
     width: 40px;
     height: 40px;
-    fill: #dfe3ee;
+    fill: rgba(var(--bg-primary), 1);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &:hover {
     svg {
-      fill: #f7f7f7;
+      fill: rgba(var(--bg-primary), 1);
     }
   }
 `;
@@ -136,24 +136,24 @@ export const StyleNavLink = styled(NavLink)`
   border: 2px solid transparent;
   padding: 8px;
   order: 0;
-  color: #dfe3ee;
+  color: rgba(var(--text-primary), 1);
   font-size: 20px;
   font-weight: bold;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    color: #f7f7f7;
-    border: 2px solid #f7f7f7;
+    color: rgba(var(--text-primary), 1);
+    border: 2px solid rgba(var(--bg-primary), 1);
 
     &.active {
-      background-color: #f7f7f7;
-      border: 2px solid #f7f7f7;
+      background-color: rgba(var(--bg-primary), 1);
+      border: 2px solid rgba(var(--bg-primary), 1);
     }
   }
 
   &.active {
-    background-color: #dfe3ee;
-    color: #3b5998;
+    background-color: rgba(var(--bg-primary), 1);
+    color: rgba(var(--accent), 1);
   }
   /* @media (width <= 576px) {
     display: none;
@@ -175,12 +175,12 @@ export const LoginButton = styled.button`
     display: block;
     width: 40px;
     height: 40px;
-    stroke: #dfe3ee;
+    stroke: rgba(var(--bg-primary), 1);
   }
 
   &:hover {
     svg {
-      stroke: #f7f7f7;
+      stroke: rgba(var(--bg-primary), 1);
     }
   }
 
