@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const List = styled.ul`
   grid-row: 5 / 6;
   grid-column: 1 / 4;
-  color: #3b5998;
+  color: rgba(var(--text), 1);
   column-count: 6;
   column-gap: 25px;
-  column-rule: 1px solid #dfe3ee;
+  column-rule: 1px solid rgba(var(--text), 1);
 
   li {
     line-height: 1.2;

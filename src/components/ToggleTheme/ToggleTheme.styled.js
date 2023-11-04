@@ -11,12 +11,12 @@ export const LabelToggleTheme = styled.label`
 
   svg {
     font-size: 30px;
-    fill: rgba(var(--bg-primary), 0.7);
+    fill: rgba(var(--bg-primary), 1);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   :hover svg {
-    fill: rgba(var(--bg-primary), 1);
+    fill: rgba(var(--bg-primary), 0.7);
   }
 
   input {

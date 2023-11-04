@@ -106,7 +106,7 @@ export const Logo = styled.div`
 
   &:hover {
     svg {
-      fill: rgba(var(--bg-primary), 1);
+      fill: rgba(var(--bg-primary), 0.7);
     }
   }
 `;
@@ -146,14 +146,14 @@ export const StyleNavLink = styled(NavLink)`
     border: 2px solid rgba(var(--bg-primary), 1);
 
     &.active {
-      background-color: rgba(var(--bg-primary), 1);
-      border: 2px solid rgba(var(--bg-primary), 1);
+      background-color: rgba(var(--bg-primary), 0.7);
+      border: 2px solid rgba(var(--bg-primary), 0);
     }
   }
 
   &.active {
     background-color: rgba(var(--bg-primary), 1);
-    color: rgba(var(--accent), 1);
+    color: rgba(var(--text), 1);
   }
   /* @media (width <= 576px) {
     display: none;
@@ -180,7 +180,7 @@ export const LoginButton = styled.button`
 
   &:hover {
     svg {
-      stroke: rgba(var(--bg-primary), 1);
+      stroke: rgba(var(--bg-primary), 0.7);
     }
   }
 

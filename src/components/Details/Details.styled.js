@@ -32,7 +32,7 @@ export const Image = styled.img`
 `;
 
 export const Title = styled.h1`
-  color: #3b5998;
+  color: rgba(var(--text), 1);
   font-size: 20px;
   font-weight: bold;
   grid-row: 1 / 2;
@@ -45,7 +45,7 @@ export const Title = styled.h1`
 `;
 
 export const Genres = styled.p`
-  color: #3b5998;
+  color: rgba(var(--text), 1);
   grid-row: 2 / 3;
   grid-column: 2 / 3;
 
@@ -57,7 +57,7 @@ export const Genres = styled.p`
 
 export const Rating = styled.p`
   display: flex;
-  color: #3b5998;
+  color: rgba(var(--text), 1);
   grid-row: 2 / 3;
   grid-column: 3 / 4;
 
@@ -68,7 +68,7 @@ export const Rating = styled.p`
 `;
 
 export const Overview = styled.p`
-  color: #3b5998;
+  color: rgba(var(--text), 1);
   text-align: justify;
   line-height: 1.2;
   grid-row: 3 / 4;
@@ -81,7 +81,6 @@ export const Overview = styled.p`
 `;
 
 export const ButtonAdditional = styled.ul`
-  color: #3b5998;
   grid-row: 4 / 5;
   grid-column: 1 / 2;
   display: flex;
@@ -101,23 +100,24 @@ export const ButtonAdditional = styled.ul`
 export const Link = styled(NavLink)`
   text-align: center;
   background-color: #dfe3ee;
-  color: #3b5998;
+  color: rgba(var(--accent), 1);
   border-radius: 4px;
   padding: 8px 16px;
   display: block;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background-color: #3b5998;
+    background-color: rgba(var(--text), 0.7);
     color: #dfe3ee;
 
     &.active {
+      background-color: rgba(var(--accent), 0.7);
       color: #f7f7f7;
     }
   }
 
   &.active {
-    background-color: #3b5998;
+    background-color: rgba(var(--accent), 1);
     color: #dfe3ee;
   }
 `;

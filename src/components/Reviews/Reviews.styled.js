@@ -5,7 +5,7 @@ const List = styled.ul`
   gap: 25px;
   grid-row: 5 / 6;
   grid-column: 1 / 4;
-  color: #3b5998;
+  color: rgba(var(--text), 1);
   text-align: justify;
 
   h3 {

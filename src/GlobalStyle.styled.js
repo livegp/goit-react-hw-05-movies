@@ -12,7 +12,7 @@ ${reset}
   --accent: 58,87,149;
   --bg-primary: 237,240,245;
   --bg-secondary: 99,123,173;
-  --text: 173,185,211;
+  --text: 58,87,149;
   --text-primary: 237,240,245;
   --text-secondary: 58,87,149;
 }
@@ -44,7 +44,7 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   overflow-y: scroll;
   color: var(--text-primary);
-  background-color: rgba(var(--bg-primary), 1);;
+  background-color: rgba(var(--bg-primary), 1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,16 +54,16 @@ body::-webkit-scrollbar {
   height: 6px;
 }
 body::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(var(--accent), 0.5);
 }
 body::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(var(--accent), 1);
 }
 body::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(var(--accent), 0.7);
 }
 body::-webkit-scrollbar-thumb:active {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(var(--accent), 1);
 }
 
 a, a:visited, a:hover {

@@ -10,10 +10,10 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
-  color: #8b9dc3;
+  color: rgba(var(--text), 1);
 
   :hover {
-    color: #3b5998;
+    color: rgba(var(--text), 0.7);
   }
 `;
 

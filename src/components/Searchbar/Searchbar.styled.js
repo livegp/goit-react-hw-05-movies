@@ -6,7 +6,7 @@ export const SearchForm = styled(Form)`
   align-items: center;
   width: 100%;
   max-width: 300px;
-  border: 2px solid rgba(var(--bg-primary), 0.7);
+  border: 2px solid rgba(var(--bg-primary), 1);
   background-color: transparent;
   border-radius: 4px;
   overflow: hidden;
@@ -14,7 +14,7 @@ export const SearchForm = styled(Form)`
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    border-color: rgba(var(--bg-primary), 1);
+    border-color: rgba(var(--bg-primary), 0.7);
   }
   /* @media (width <= 576px) {
     display: none;
@@ -22,9 +22,9 @@ export const SearchForm = styled(Form)`
 `;
 
 export const SearchFormButton = styled.button`
-  background-color: rgba(var(--bg-primary), 0.7);
+  background-color: rgba(var(--bg-primary), 1);
   padding: 0;
-  color: #3b5998;
+  color: rgba(var(--text), 1);
   width: 36px;
   height: 36px;
   border: 0;
@@ -36,13 +36,13 @@ export const SearchFormButton = styled.button`
   align-items: center;
 
   &:hover {
-    background-color: rgba(var(--bg-primary), 1);
+    background-color: rgba(var(--bg-primary), 0.7);
   }
 
   svg {
     width: 25px;
     height: 25px;
-    fill: #3b5998;
+    fill: rgba(var(--text), 1);
   }
 `;
 
