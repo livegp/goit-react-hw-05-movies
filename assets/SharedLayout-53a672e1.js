@@ -1,4 +1,4 @@
-import{s as $,j as g,G as Ue,N as Ft,g as Mt,r as l,u as Rt,c as Pt,L as Lt,O as kt}from"./index-6f525fa3.js";import{A as Dt,I as Nt}from"./index.esm-9396e861.js";import Vt from"./Loader-ef9dc2d5.js";import{Q as Ut}from"./react-toastify.esm-ee9aa230.js";const Bt=$.div`
+import{s as $,j as g,G as Ue,N as Ft,g as Mt,r as l,u as Rt,c as Pt,L as Lt,O as kt}from"./index-1506db9b.js";import{A as Dt,I as Nt}from"./index.esm-98fc077a.js";import Vt from"./Loader-427c3064.js";import{Q as Ut}from"./react-toastify.esm-a4aed0c3.js";const Bt=$.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
@@ -290,8 +290,10 @@ import{s as $,j as g,G as Ue,N as Ft,g as Mt,r as l,u as Rt,c as Pt,L as Lt,O as
     transition: var(--trans);
   }
 
-  :hover svg {
-    fill: rgba(var(--bg-primary), 0.7);
+  &:hover {
+    svg {
+      fill: rgba(var(--bg-primary), 0.7);
+    }
   }
 
   input {
