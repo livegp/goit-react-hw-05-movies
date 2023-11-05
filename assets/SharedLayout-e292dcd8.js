@@ -1,4 +1,4 @@
-import{s as $,j as h,G as Ue,N as Ft,g as Mt,r as l,u as Rt,c as Pt,L as Lt,O as kt}from"./index-bad079a2.js";import{A as Dt,I as Nt}from"./index.esm-559dd448.js";import Vt from"./Loader-bf4d5bca.js";import{Q as Ut}from"./react-toastify.esm-cacb5d85.js";const Bt=$.div`
+import{s as $,j as h,G as Ue,N as Ft,g as Mt,r as l,u as Rt,c as Pt,L as Lt,O as kt}from"./index-4f54657a.js";import{A as Dt,I as Nt}from"./index.esm-1b58d36c.js";import Vt from"./Loader-8e080c68.js";import{Q as Ut}from"./react-toastify.esm-0e92b99d.js";const Bt=$.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
@@ -124,17 +124,18 @@ import{s as $,j as h,G as Ue,N as Ft,g as Mt,r as l,u as Rt,c as Pt,L as Lt,O as
       fill: rgba(var(--bg-primary), 0.7);
     }
     a {
-      color: rgba(var(--text-primary), 0.7);
+      color: rgba(var(--bg-primary), 0.7);
     }
   }
 
   a {
     display: flex;
+    gap: 5px;
     align-items: center;
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
-    color: rgba(var(--text-primary), 1);
+    color: rgba(var(--bg-primary), 1);
     transition: var(--trans);
   }
 `,Zt=$.nav`
