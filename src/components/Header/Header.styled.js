@@ -89,13 +89,13 @@ export const ContainerHeader = styled.div`
   flex-wrap: nowrap;
   height: 100%;
   padding: 15px;
-  gap: 5px;
+  gap: 25px;
 `;
 
 export const Logo = styled.div`
   order: 1;
   flex-grow: 0;
-  margin-right: 30px;
+  margin-right: 25px;
 
   svg {
     display: block;
@@ -164,6 +164,7 @@ export const StyleNavLink = styled(NavLink)`
 export const LoginButton = styled.button`
   order: 5;
   margin-top: 0;
+  padding: 0px;
   border-width: 0;
   cursor: pointer;
   display: block;
