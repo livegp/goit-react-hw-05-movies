@@ -1,6 +1,5 @@
-import { IoLogInOutline } from 'react-icons/io5';
-
-import { ContainerHeader, LoginButton, HeaderBox } from './Header.styled';
+import { HeaderContainer, HeaderBox } from './Header.styled';
+import LoginButton from '../LoginButton/LoginButton';
 import Logo from '../Logo/Logo';
 import MenuButton from '../MenuButton/MenuButton';
 import Nav from '../Nav/Nav';
@@ -10,16 +9,14 @@ import ToggleTheme from '../ToggleTheme/ToggleTheme';
 function Header() {
   return (
     <HeaderBox>
-      <ContainerHeader>
+      <HeaderContainer>
         <Logo />
         <Nav />
         <Searchbar />
         <ToggleTheme />
-        <LoginButton type="button">
-          <IoLogInOutline />
-        </LoginButton>
+        <LoginButton />
         <MenuButton />
-      </ContainerHeader>
+      </HeaderContainer>
     </HeaderBox>
   );
 }
