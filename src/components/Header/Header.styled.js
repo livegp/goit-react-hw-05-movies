@@ -109,6 +109,19 @@ export const Logo = styled.div`
     svg {
       fill: rgba(var(--bg-primary), 0.7);
     }
+    a {
+      color: rgba(var(--text-primary), 0.7);
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(var(--text-primary), 1);
+    transition: var(--trans);
   }
 `;
 

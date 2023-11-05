@@ -20,6 +20,7 @@ function Header() {
         <Logo>
           <Link to="/">
             <RiMovie2Line />
+            <p>Movie</p>
           </Link>
         </Logo>
         <Nav>
