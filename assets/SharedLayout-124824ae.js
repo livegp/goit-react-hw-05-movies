@@ -1,4 +1,4 @@
-import{s as A,j as p,G as Be,L as Ft,r as u,N as Mt,g as Rt,u as Lt,c as Pt,O as kt}from"./index-5db77a49.js";import{I as Dt,A as Nt}from"./index.esm-90581991.js";import Vt from"./Loader-60f2fd7d.js";import{Q as Bt}from"./react-toastify.esm-33d43e11.js";const Ut=A.div`
+import{s as A,j as p,G as Be,L as Ft,r as u,N as Mt,g as Rt,u as Lt,c as Pt,O as kt}from"./index-f6414a0a.js";import{I as Dt,A as Nt}from"./index.esm-2ba1b154.js";import Vt from"./Loader-f2a70570.js";import{Q as Bt}from"./react-toastify.esm-006ac346.js";const Ut=A.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
@@ -96,7 +96,7 @@ import{s as A,j as p,G as Be,L as Ft,r as u,N as Mt,g as Rt,u as Lt,c as Pt,O as
     color: rgba(var(--bg-primary), 1);
     transition: var(--trans);
   }
-`;function Xt(){return p.jsx(qt,{children:p.jsxs(Ft,{to:"/",children:[p.jsx(Zt,{}),p.jsx("p",{children:"Movie"})]})})}const Jt=A.label`
+`;function Xt(){return p.jsx(qt,{children:p.jsxs(Ft,{to:"/",children:[p.jsx(Zt,{}),p.jsx("p",{children:"Movies"})]})})}const Jt=A.label`
   order: 6;
   display: flex;
   align-items: center;
