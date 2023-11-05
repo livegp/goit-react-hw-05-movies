@@ -8,7 +8,7 @@ function Logo() {
     <LogoBox>
       <Link to="/">
         <RiMovie2Line />
-        <p>Movie</p>
+        <p>Movies</p>
       </Link>
     </LogoBox>
   );
