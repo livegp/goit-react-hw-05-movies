@@ -1,4 +1,4 @@
-import{s as $,j as g,G as Ue,N as Ft,g as Mt,r as l,u as Rt,c as Pt,L as Lt,O as kt}from"./index-1506db9b.js";import{A as Dt,I as Nt}from"./index.esm-98fc077a.js";import Vt from"./Loader-427c3064.js";import{Q as Ut}from"./react-toastify.esm-a4aed0c3.js";const Bt=$.div`
+import{s as $,j as g,G as Ue,N as Ft,g as Mt,r as l,u as Rt,c as Pt,L as Lt,O as kt}from"./index-ff5f554b.js";import{A as Dt,I as Nt}from"./index.esm-68c5318b.js";import Vt from"./Loader-e1f0dc84.js";import{Q as Ut}from"./react-toastify.esm-446be29a.js";const Bt=$.div`
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
@@ -105,11 +105,11 @@ import{s as $,j as g,G as Ue,N as Ft,g as Mt,r as l,u as Rt,c as Pt,L as Lt,O as
   flex-wrap: nowrap;
   height: 100%;
   padding: 15px;
-  gap: 5px;
+  gap: 25px;
 `,Yt=$.div`
   order: 1;
   flex-grow: 0;
-  margin-right: 30px;
+  margin-right: 25px;
 
   svg {
     display: block;
@@ -172,6 +172,7 @@ import{s as $,j as g,G as Ue,N as Ft,g as Mt,r as l,u as Rt,c as Pt,L as Lt,O as
 `,qt=$.button`
   order: 5;
   margin-top: 0;
+  padding: 0px;
   border-width: 0;
   cursor: pointer;
   display: block;
