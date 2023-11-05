@@ -10,6 +10,7 @@ import {
   LoginButton,
   HeaderBox,
 } from './Header.styled';
+import MenuButton from '../MenuButton/MenuButton';
 import Searchbar from '../Searchbar/Searchbar';
 import ToggleTheme from '../ToggleTheme/ToggleTheme';
 
@@ -38,6 +39,7 @@ function Header() {
         <LoginButton type="button">
           <IoLogInOutline />
         </LoginButton>
+        <MenuButton />
       </ContainerHeader>
     </HeaderBox>
   );
