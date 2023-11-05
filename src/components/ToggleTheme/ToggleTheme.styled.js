@@ -24,6 +24,7 @@ export const LabelToggleTheme = styled.label`
   input {
     cursor: pointer;
     opacity: 0;
+    display: none;
   }
 `;
 
