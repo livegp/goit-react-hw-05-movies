@@ -1,4 +1,4 @@
-import { FaMoon, FaSun } from 'react-icons/fa6';
+import { FaRegMoon, FaRegSun } from 'react-icons/fa6';
 import styled, { keyframes } from 'styled-components';
 
 export const LabelToggleTheme = styled.label`
@@ -41,10 +41,10 @@ const rotateslide = keyframes`
   }
 `;
 
-export const MoonToggleTheme = styled(FaMoon)`
+export const MoonToggleTheme = styled(FaRegMoon)`
   animation: ${rotateslide} 0.5s;
 `;
 
-export const SunToggleTheme = styled(FaSun)`
+export const SunToggleTheme = styled(FaRegSun)`
   animation: ${rotateslide} 0.5s;
 `;
