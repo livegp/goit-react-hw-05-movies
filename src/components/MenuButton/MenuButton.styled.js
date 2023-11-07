@@ -6,15 +6,14 @@ const MenuB = styled.label`
   align-items: center;
   align-self: center;
   justify-content: center;
-  width: 44px;
+  width: 40px;
   height: 40px;
-  padding: 0 10px;
   border-radius: 4px;
   cursor: pointer;
-  background-color: rgba(var(--bg-primary), 1);
-  transition: var(--trans);
 
-  &:hover {
+  &:hover span,
+  &:hover span::before,
+  &:hover span::after {
     background-color: rgba(var(--bg-primary), 0.7);
   }
 
@@ -49,28 +48,28 @@ const MenuB = styled.label`
   span {
     position: relative;
     display: block;
-    width: 20px;
-    height: 2px;
-    background-color: rgba(var(--accent), 1);
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 25px;
+    height: 3px;
+    background-color: rgba(var(--bg-primary), 1);
+    transition: var(--trans);
 
     &::after,
     &:before {
       position: absolute;
       left: 0;
-      width: 20px;
+      width: 25px;
       height: 100%;
-      background-color: rgba(var(--accent), 1);
-      transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      background-color: rgba(var(--bg-primary), 1);
+      transition: var(--trans);
       content: '';
     }
 
     &::after {
-      top: 6px;
+      top: 8px;
     }
 
     &:before {
-      top: -6px;
+      top: -8px;
     }
   }
 `;

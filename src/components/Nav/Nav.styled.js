@@ -28,11 +28,10 @@ export const NavLink = styled(Link)`
   font-size: 20px;
   font-weight: bold;
   background-color: transparent;
-  color: rgba(var(--text-primary), 1);
+  color: rgba(var(--bg-primary), 1);
   transition: var(--trans);
 
   &:hover {
-    color: rgba(var(--text-primary), 1);
     border: 2px solid rgba(var(--bg-primary), 1);
 
     &.active {
@@ -43,7 +42,7 @@ export const NavLink = styled(Link)`
 
   &.active {
     background-color: rgba(var(--bg-primary), 1);
-    color: rgba(var(--text), 1);
+    color: rgba(var(--accent), 1);
   }
   /* @media (width <= 576px) {
     display: none;

@@ -34,7 +34,7 @@ function Searchbar() {
         <Formik initialValues={{ search: '' }} onSubmit={handleSearch}>
           <Form>
             <SearchFormButton type="submit" value="submit">
-              <AiOutlineSearch size={25} />
+              <AiOutlineSearch size={30} />
             </SearchFormButton>
             <SearchFormLabel htmlFor="search" />
             <SearchFormInput
@@ -49,9 +49,9 @@ function Searchbar() {
       ) : undefined}
       <IconButton onClick={toggleSearch}>
         {isActive ? (
-          <AiOutlineClose size={25} />
+          <AiOutlineClose size={30} />
         ) : (
-          <AiOutlineSearch size={25} />
+          <AiOutlineSearch size={30} />
         )}
       </IconButton>
     </SearchContainer>

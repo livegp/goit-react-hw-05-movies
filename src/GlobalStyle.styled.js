@@ -24,7 +24,8 @@ ${reset}
 
 [data-theme='dark'] {
   --accent: 58,87,149;
-  --bg-primary: 51,51,51;
+  /* --bg-primary: 51,51,51; */
+  --bg-primary: 0,0,0;
   --bg-secondary: 51,51,51;
   --text: 173,185,211;
   --text-primary: 237,240,245;

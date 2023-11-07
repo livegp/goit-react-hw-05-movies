@@ -7,8 +7,11 @@ export const SearchContainer = styled.div`
   max-width: ${properties => (properties.isSearching ? 300 : 40)}px;
   height: 40px;
   background-color: transparent;
-  border: 2px solid rgba(var(--bg-primary), 1);
-  border-radius: 4px;
+  /* border: 2px solid rgba(var(--bg-primary), 1); */
+  border-bottom-width: ${properties => (properties.isSearching ? 1 : 0)}px;
+  border-style: solid;
+  border-color: rgba(var(--bg-primary), 1);
+  /* border-radius: 4px; */
   align-items: center;
   overflow: hidden;
   order: 2;
@@ -67,18 +70,24 @@ export const SearchFormInput = styled(Field)`
 
 export const SearchFormButton = styled.button`
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   top: 0;
   left: 0;
-  height: 36px;
-  width: 36px;
+  padding: 0;
   border: none;
   z-index: 1;
   cursor: pointer;
-  background-color: rgba(var(--bg-primary), 1);
-  transition: var(--trans);
+  background-color: transparent;
+  /* transition: var(--trans); */
 
   &:hover {
-    background-color: rgba(var(--bg-primary), 0.7);
+    svg {
+      fill: rgba(var(--bg-primary), 0.7);
+    }
 
     &::after {
       opacity: 1;
@@ -102,25 +111,31 @@ export const SearchFormButton = styled.button`
   }
 
   svg {
-    fill: rgba(var(--text), 1);
+    fill: rgba(var(--bg-primary), 1);
     transition: var(--trans);
   }
 `;
 
 export const IconButton = styled.button`
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   top: 0;
   right: 0;
-  height: 36px;
-  width: 36px;
+  padding: 0;
   border: none;
   z-index: 1;
   cursor: pointer;
-  background-color: rgba(var(--bg-primary), 1);
-  transition: var(--trans);
+  background-color: transparent;
+  order: 3;
 
   &:hover {
-    background-color: rgba(var(--bg-primary), 0.7);
+    svg {
+      fill: rgba(var(--bg-primary), 0.7);
+    }
 
     &::after {
       opacity: 1;
@@ -138,13 +153,13 @@ export const IconButton = styled.button`
     border-radius: 4px;
     z-index: -1;
     background-color: #000;
-    transition: all 0.25s ease;
     transform: scale(0.6);
     opacity: 0;
+    transition: var(--trans);
   }
 
   svg {
-    fill: rgba(var(--text), 1);
+    fill: rgba(var(--bg-primary), 1);
     transition: var(--trans);
   }
 `;
