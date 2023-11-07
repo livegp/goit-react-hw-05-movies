@@ -1,4 +1,4 @@
-import{s as r,j as o}from"./index-7dd3a3fa.js";const i=r.p`
+import{s as r,j as o}from"./index-36786b22.js";const i=r.p`
   grid-row: 5 / 6;
   grid-column: 1 / 4;
   color: #3b5998;
