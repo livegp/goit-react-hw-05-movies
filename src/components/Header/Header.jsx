@@ -4,7 +4,6 @@ import Logo from '../Logo/Logo';
 import MenuButton from '../MenuButton/MenuButton';
 import Nav from '../Nav/Nav';
 import Searchbar from '../Searchbar/Searchbar';
-import SearchbarNew from '../SearchbarNew/SearchbarNew';
 import ToggleTheme from '../ToggleTheme/ToggleTheme';
 
 function Header() {
@@ -13,8 +12,7 @@ function Header() {
       <HeaderContainer>
         <Logo />
         <Nav />
-        {/* <Searchbar /> */}
-        <SearchbarNew />
+        <Searchbar />
         <ToggleTheme />
         <LoginButton />
         <MenuButton />

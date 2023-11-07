@@ -5,7 +5,7 @@ export const LabelToggleTheme = styled.label`
   display: flex;
   align-items: center;
   justify-content: center;
-  order: 2;
+  order: 3;
   cursor: pointer;
   user-select: none;
 

@@ -1,16 +1,21 @@
-import { Formik } from 'formik';
-import { AiOutlineSearch } from 'react-icons/ai';
+import { Form, Formik } from 'formik';
+import { useState } from 'react';
+import { AiOutlineSearch, AiOutlineClose } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import {
-  SearchForm,
+  IconButton,
+  SearchContainer,
   SearchFormButton,
   SearchFormInput,
   SearchFormLabel,
 } from './Searchbar.styled';
 
 function Searchbar() {
+  const [isActive, setIsActive] = useState(false);
+  const toggleSearch = () => setIsActive(!isActive);
+
   const navigate = useNavigate();
 
   const handleSearch = ({ search }, actions) => {
@@ -24,20 +29,32 @@ function Searchbar() {
   };
 
   return (
-    <Formik initialValues={{ search: '' }} onSubmit={handleSearch}>
-      <SearchForm>
-        <SearchFormButton type="submit" value="submit">
-          <AiOutlineSearch />
-        </SearchFormButton>
-        <SearchFormLabel htmlFor="search" />
-        <SearchFormInput
-          type="text"
-          id="search"
-          name="search"
-          placeholder="Search"
-        />
-      </SearchForm>
-    </Formik>
+    <SearchContainer isSearching={isActive}>
+      {isActive ? (
+        <Formik initialValues={{ search: '' }} onSubmit={handleSearch}>
+          <Form>
+            <SearchFormButton type="submit" value="submit">
+              <AiOutlineSearch size={25} />
+            </SearchFormButton>
+            <SearchFormLabel htmlFor="search" />
+            <SearchFormInput
+              type="text"
+              id="search"
+              name="search"
+              placeholder="Search"
+              isSearching={isActive}
+            />
+          </Form>
+        </Formik>
+      ) : undefined}
+      <IconButton onClick={toggleSearch}>
+        {isActive ? (
+          <AiOutlineClose size={25} />
+        ) : (
+          <AiOutlineSearch size={25} />
+        )}
+      </IconButton>
+    </SearchContainer>
   );
 }
 

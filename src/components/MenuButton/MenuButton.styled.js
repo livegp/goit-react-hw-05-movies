@@ -8,6 +8,7 @@ const MenuB = styled.label`
   justify-content: center;
   width: 44px;
   height: 40px;
+  padding: 0 10px;
   border-radius: 4px;
   cursor: pointer;
   background-color: rgba(var(--bg-primary), 1);
